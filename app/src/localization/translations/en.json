@@ -1,0 +1,260 @@
+{
+  "language": "English",
+  "components": {
+    "specify": "Please specify...",
+    "alert": {
+      "success": "Code successful",
+      "missing_code": "Please enter code.",
+      "wrong_code": "Code does not exist",
+      "error": "Error: {{ error }}",
+      "server_error": "Server error",
+      "internal_error": "Internal error"
+    },
+    "upload": {
+      "no_test": "No Tests found",
+      "successful": "Tests successfully uploaded",
+      "server_error": "Server error",
+      "internal_error": "Internal error"
+    }
+  },
+  "screens": {
+    "home": {
+      "title": "Home",
+      "welcome": "Hello",
+      "install": "Install App",
+      "install_ios_hint": "To install the app, tap the share icon at the bottom and then select 'Add to Home Screen'.",
+      "open_app": "Please close your browser now and open the app.",
+      "enter_code": "code...",
+      "button": {
+        "start": "Start Test",
+        "validate": "Check Code",
+        "symptoms": "Enter Symptoms",
+        "demo": "Start Demo",
+        "tomorrow": "Start Tomorrow",
+        "missed": "Missed Test",
+        "sleep": "Sleep",
+        "weekly": "Weekly Survey",
+        "export": "Export"
+      },
+      "permission": {
+        "mic": {
+          "title": "Microphone access required",
+          "info": "For some tests, we need to record your voice, which requires access to your microphone.\nPlease allow access to continue."
+        },
+        "confirm": "Understood",
+        "error_title": "An error has occurred",
+        "error_close": "Close",
+        "error_refresh": "Reload"
+      }
+    },
+    "symptoms": {
+      "title": "Enter physical symptoms",
+      "add": "Enter symptom",
+      "finish": "Finish"
+    },
+    "general": {
+      "exit": {
+        "end_button": "End",
+        "end_title": "End survey",
+        "end_question": "Do you really want to end the survey?",
+        "end_confirm_yes": "End",
+        "end_confirm_no": "Cancel"
+      },
+      "fatigue": {
+        "title": "Fatigue",
+        "question": "How much fatigue do you feel right now?",
+        "mental": "Mental",
+        "physical": "Physical",
+        "no_fatigue": "No fatigue",
+        "strong_fatigue": "Very strong fatigue",
+        "next": "Next"
+      },
+      "end": {
+        "title": "End of test",
+        "headline": "Thank you for your participation!",
+        "text": "We sincerely thank you for your help.\nYour answers have been saved.",
+        "timesup": "The {{ duration }} minutes are now up.",
+        "button": "End"
+      },
+      "no_test_previous": {
+        "title": "No test last time",
+        "question": "You did not take the test yesterday at {{ time }}. What was the reason?",
+        "answer_fatigue": "Too exhausted",
+        "answer_time": "No time",
+        "answer_mood": "No desire",
+        "answer_notification_missing": "No notification received",
+        "answer_notification_missed": "Notification not noticed",
+        "answer_internet": "No internet",
+        "answer_other_technical": "Other technical difficulties:",
+        "answer_other": "Other:",
+        "answer_no_response": "I don't know / I don't want to answer.",
+        "answer_wrong": "That's not correct. I fully completed the test.",
+        "next": "Next"
+      },
+      "last_test_opinion": {
+        "title": "Opinion about the last test",
+        "question_prefix": "Last survey yesterday at {{ time }}",
+        "energy": {
+          "question": "The last survey should have been...",
+          "answer_much_shorter": "Much shorter",
+          "answer_shorter": "A little shorter",
+          "answer_equal": "Just right",
+          "answer_longer": "A little longer",
+          "answer_much_longer": "Much longer",
+          "answer_no_response": "I don't know / I don't want to answer."
+        },
+        "pem": {
+          "question": "Did the last survey trigger PEM for you?",
+          "answer_yes": "Yes",
+          "answer_no": "No",
+          "answer_unsure_relation": "I had PEM, but I don't know if it was related to the last survey.",
+          "answer_no_response": "I don't know. / I don't want to answer."
+        },
+        "next": "Next"
+      },
+      "no_test_now": {
+        "title": "No test now",
+        "question": "Why can't you take the test right now?",
+        "answer_fatigued": "Too exhausted",
+        "answer_time": "No time",
+        "answer_mood": "No desire",
+        "answer_other": "Other:",
+        "answer_no_response": "I don't know / I don't want to answer.",
+        "back": "Back",
+        "next": "Next"
+      }
+    },
+    "pre_test": {
+      "duration": {
+        "title": "Duration",
+        "question": "How many minutes of survey do you have energy for now?",
+        "hint": "The survey will stop after this time (+- 30 seconds).",
+        "minutes": "Minutes",
+        "no_time": "I can't do the survey right now."
+      },
+      "symptoms": {
+        "title": "Symptoms",
+        "question": "How strongly are you currently experiencing the following symptoms?",
+        "concentration": "Concentration disorder",
+        "wordfinding": "Word-finding difficulties",
+        "memory": "Memory impairment",
+        "no_symptoms": "Not at all",
+        "strong_symptoms": "Very strong",
+        "next": "Next"
+      }
+    },
+    "test": {
+      "memory": {
+        "title": "Remember words",
+        "introduction": "Please memorize the following words carefully.\n\nAfterwards, list all the words you remember.",
+        "start_text": "The test starts in",
+        "button": "Ready"
+      },
+      "memory_repeat": {
+        "title": "Memory Repeat",
+        "introduction": "Once you are ready, press 'Start recording'.",
+        "recording_hint": "Please name all the words you remember.",
+        "recording_start": "Start recording",
+        "recording_confirm_hint": "Are you really finished?\nThen you can press 'Done' again.\n\nOtherwise, list any remaining words you remember.",
+        "recording_end": "Done",
+        "end_title": "Recording finished.",
+        "end_text": "The recording has been saved.",
+        "next": "Next"
+      },
+      "matching": {
+        "title": "Matching",
+        "introduction": "Please match the following symbols and numbers.",
+        "start_text": "The test starts in",
+        "button": "Start",
+        "next": "Next",
+        "timesup_title": "Time's up.",
+        "timesup_text": "The results has been saved."
+      },
+      "stroop": {
+        "title": "Stroop",
+        "introduction": "Please read the word out loud.",
+        "start": "Start",
+        "start_text": "Recording starts in",
+        "next": "Next",
+        "timesup_title": "Time's up.",
+        "timesup_text": "The recording has been completed and saved."
+      }
+    },
+    "post_test": {
+      "sleep": {
+        "question1": "How long did you sleep last night?",
+        "answer_pre": "Approximately",
+        "answer_post": "hours",
+        "question2": "How was your sleep last night?",
+        "next": "Next"
+      },
+      "activities_must": {
+        "question": "What have you done since the last survey?",
+        "title": "Mandatory activity/activities that...",
+        "examples": "(e.g. work, housework...)",
+        "answer_physical": "Were physically demanding.",
+        "answer_mental": "Were mentally demanding.",
+        "answer_not_challenging": "Were not demanding at all",
+        "answer_no_activities": "No mandatory activities",
+        "next": "Next"
+      },
+      "activities_free": {
+        "question": "What have you done since the last survey?",
+        "title": "Leisure activities that...",
+        "examples": "(e.g. meeting friends, hobbies...)",
+        "answer_physical": "Were physically demanding.",
+        "answer_mental": "Were mentally demanding.",
+        "answer_not_challenging": "Were not demanding at all",
+        "answer_no_activities": "No leisure activities",
+        "next": "Next"
+      },
+      "activities_recovery": {
+        "question": "What have you done to recover since the last survey?",
+        "answer_rested": "I rested.",
+        "answer_slept": "I took a nap/afternoon nap.",
+        "answer_retreated": "Retreated to a dark room.",
+        "answer_other": "Recovered in other ways:",
+        "answer_nothing": "Did nothing to recover.",
+        "next": "Next"
+      },
+      "substances": {
+        "question": "Have you consumed any of the following substances in the last 4 hours?",
+        "options": ["Caffeine/Teine", "Alcohol", "Nicotine"],
+        "other": "Other substances (including off-label medicine)",
+        "nothing": "No",
+        "next": "Next"
+      },
+      "symptoms": {
+        "title": "Physical symptoms",
+        "question": "How strongly are you currently experiencing the following symptoms?",
+        "stomach_ache": "Stomach ache",
+        "headache": "Headache",
+        "nausea": "Nausea",
+        "next": "Next"
+      },
+      "mood": {
+        "question": "How is your mood right now?",
+        "bad": "Very bad",
+        "good": "Very good",
+        "next": "Next"
+      },
+      "performance": {
+        "title": "",
+        "question": "",
+        "yes": "Yes, that applies",
+        "no": "No, that does not apply",
+        "questions": {
+          "one": "Physically, I feel able to do only a little.",
+          "two": "When I do something, I can concentrate well on it.",
+          "three": "Physically, I trust myself to do a lot.",
+          "four": "I can concentrate well.",
+          "five": "It takes great effort for me to concentrate on things.",
+          "six": "Physically, I feel in poor condition.",
+          "seven": "My thoughts wander very easily.",
+          "eight": "Physically, I feel in excellent condition."
+        },
+        "next": "Next"
+      }
+    }
+  }
+}

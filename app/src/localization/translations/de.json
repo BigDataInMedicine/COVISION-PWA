@@ -1,0 +1,265 @@
+{
+  "language": "German",
+  "components": {
+    "specify": "Bitte angeben...",
+    "alert": {
+      "success": "Code erfolgreich",
+      "missing_code": "Bitte Code eingeben.",
+      "wrong_code": "Code existiert nicht",
+      "error": "Fehler: {{ error }}",
+      "server_error": "Serverfehler",
+      "internal_error": "Interner Fehler"
+    },
+    "upload": {
+      "no_test": "Keine gespeicherten Tests gefunden",
+      "successful": "Tests erfolgreich hochgeladen",
+      "server_error": "Serverfehler",
+      "internal_error": "Interner Fehler"
+    }
+  },
+  "screens": {
+    "home": {
+      "title": "Startseite",
+      "welcome": "Hallo",
+      "install": "App installieren",
+      "install_ios_hint": "Um die App zu installieren, tippen Sie unten auf das Teilen-Symbol und wählen dann 'Zum Home-Bildschirm hinzufügen' aus.",
+      "open_app": "Bitte schließen Sie jetzt den Browser und öffnen Sie die App.",
+      "enter_code": "code...",
+      "button": {
+        "start": "Test Starten",
+        "validate": "Code prüfen",
+        "symptoms": "Symptome Eingeben",
+        "demo": "Demo Starten",
+        "tomorrow": "Morgen Starten",
+        "missed": "Verpasster Test",
+        "sleep": "Schlaf",
+        "weekly": "Wöchentliche Erhebung",
+        "export": "Export"
+      },
+      "permission": {
+        "mic": {
+          "title": "Mikrofonzugriff benötigt",
+          "info": "Bei ein paar Tests müssen wir Ihre Stimme aufzeichnen, dafür benötigen wir Zugriff auf Ihr Mikrofon.\nBitte erlauben Sie den Zugriff, um fortzufahren."
+        },
+        "confirm": "Verstanden",
+        "error_title": "Ein Fehler ist aufgetreten",
+        "error_close": "Schließen",
+        "error_refresh": "Neu laden"
+      }
+    },
+    "symptoms": {
+      "title": "Körperliche Symptome eintragen",
+      "add": "Symptom eingeben",
+      "finish": "Abschließen"
+    },
+    "general": {
+      "help": {
+        "title": "Hilfe",
+        "text": "Bei Fragen wenden Sie sich an die Testleitung.",
+        "confirm": "Schließen"
+      },
+      "exit": {
+        "end_button": "Beenden",
+        "end_title": "Erhebung beenden",
+        "end_question": "Möchten Sie die Erhebung wirklich beenden?",
+        "end_confirm_yes": "Beenden",
+        "end_confirm_no": "Abbrechen"
+      },
+      "fatigue": {
+        "title": "Fatigue",
+        "question": "Wie stark empfinden Sie gerade Fatigue?",
+        "mental": "Mental",
+        "physical": "Körperlich",
+        "no_fatigue": "keine Fatigue",
+        "strong_fatigue": "sehr starke Fatigue",
+        "next": "Weiter"
+      },
+      "end": {
+        "title": "Test Ende",
+        "headline": "Vielen Dank für Ihre Teilnahme!",
+        "text": "Wir möchten uns ganz herzlich für Ihre Mithilfe bedanken.\nIhre Antworten wurden gespeichert.",
+        "timesup": "Die {{ duration }} Minuten sind jetzt um.",
+        "button": "Beenden"
+      },
+      "no_test_previous": {
+        "title": "Kein Test letztes Mal",
+        "question": "Sie haben die Testung gestern um {{ time }} Uhr nicht durchgeführt. Woran lag das?",
+        "answer_fatigue": "Zu erschöpft",
+        "answer_time": "Keine Zeit",
+        "answer_mood": "Keine Lust",
+        "answer_notification_missing": "Keine Benachrichtigung erhalten",
+        "answer_notification_missed": "Benachrichtigung nicht bemerkt",
+        "answer_internet": "Kein Internet",
+        "answer_other_technical": "Sonstige technische Schwierigkeiten:",
+        "answer_other": "Sonstiges:",
+        "answer_no_response": "Weiß ich nicht. / Möchte ich nicht beantworten.",
+        "answer_wrong": "Das stimmt nicht. Ich habe die Testung vollständig durchgeführt.",
+        "next": "Weiter"
+      },
+      "last_test_opinion": {
+        "title": "Meinung zum letzten Test",
+        "question_prefix": "Letzte Erhebung gestern um {{ time }} Uhr",
+        "energy": {
+          "question": "Die letzte Erhebung hätte für mein Energielevel...",
+          "answer_much_shorter": "Viel kürzer sein müssen",
+          "answer_shorter": "Etwas kürzer sein müssen",
+          "answer_equal": "Genau so bleiben dürfen",
+          "answer_longer": "Etwas länger sein dürfen",
+          "answer_much_longer": "Viel länger sein dürfen",
+          "answer_no_response": "Weiß ich nicht. / Möchte ich nicht beantworten."
+        },
+        "pem": {
+          "question": "Hat die letzte Erhebung bei Ihnen PEM ausgelöst?",
+          "answer_yes": "Ja",
+          "answer_no": "Nein",
+          "answer_unsure_relation": "Ich hatte PEM, aber weiss nicht, ob es mit der letzten Befragung zusammenhing.",
+          "answer_no_response": "Weiß ich nicht. / Möchte ich nicht beantworten."
+        },
+        "next": "Weiter"
+      },
+      "no_test_now": {
+        "title": "Kein Test Jetzt",
+        "question": "Warum können Sie jetzt keine Testung durchführen?",
+        "answer_fatigued": "Zu erschöpft",
+        "answer_time": "Keine Zeit",
+        "answer_mood": "Keine Lust",
+        "answer_other": "Sonstiges:",
+        "answer_no_response": "Weiß ich nicht. / Möchte ich nicht beantworten.",
+        "back": "Zurück",
+        "next": "Weiter"
+      }
+    },
+    "pre_test": {
+      "duration": {
+        "title": "Dauer",
+        "question": "Für wie viele Minuten Befragung haben Sie jetzt Energie?",
+        "hint": "Die Befragung wird nach dieser Zeit (+- 30 Sekunden) abgebrochen.",
+        "minutes": "Minuten",
+        "no_time": "Ich kann jetzt keine Befragung durchführen."
+      },
+      "symptoms": {
+        "title": "Symptome",
+        "question": "Wie stark erleben Sie gerade die folgenden Symptome?",
+        "concentration": "Konzentrations\u00ADstörung",
+        "wordfinding": "Wortfindungs\u00ADschwierigkeiten",
+        "memory": "Gedächtnis\u00ADstörung",
+        "no_symptoms": "überhaupt nicht",
+        "strong_symptoms": "sehr stark",
+        "next": "Weiter"
+      }
+    },
+    "test": {
+      "memory": {
+        "title": "Worte merken",
+        "introduction": "Bitte prägen Sie sich die folgenden Worte gut ein.\n\nAnschließend sollen Sie alle Worte aufzählen, an die Sie sich erinnern.",
+        "start_text": "Der Test beginnt in",
+        "button": "Bereit"
+      },
+      "memory_repeat": {
+        "title": "Memory Repeat",
+        "introduction": "Sobald Sie bereit sind, drücken Sie auf 'Aufnahme starten'.",
+        "recording_hint": "Bitte nennen Sie alle Wörter, an die Sie sich erinnern.",
+        "recording_start": "Aufnahme starten",
+        "recording_confirm_hint": "Sind Sie wirklich fertig?\nDann können Sie erneut auf 'Fertig' drücken.\n\nAnsonsten nennen Sie alle restlich Wörter, an die Sie sich erinnern.",
+        "recording_end": "Fertig",
+        "end_title": "Aufnahme beendet.",
+        "end_text": "Die Aufnahme wurde gespeichert.",
+        "next": "Weiter"
+      },
+      "matching": {
+        "title": "Matching",
+        "introduction": "Wähle das Symbole zu der angezeigten Zahl.",
+        "start_text": "Der Test beginnt in",
+        "button": "Start",
+        "next": "Weiter",
+        "timesup_title": "Die Zeit ist abgelaufen.",
+        "timesup_text": "Die Eingaben wurden gespeichert."
+      },
+      "stroop": {
+        "title": "Stroop",
+        "introduction": "Bitte nenne die Farbe.",
+        "start": "Start",
+        "start_text": "Die Aufnahme beginnt in",
+        "next": "Weiter",
+        "timesup_title": "Die Zeit ist abgelaufen.",
+        "timesup_text": "Die Aufnahme wurde beendet und gespeichert."
+      }
+    },
+    "post_test": {
+      "sleep": {
+        "question1": "Wie lange haben Sie letzte Nacht geschlafen?",
+        "answer_pre": "Ungefähr",
+        "answer_post": "Stunden",
+        "question2": "Wie war Ihr Schlaf letzte Nacht?",
+        "next": "Weiter"
+      },
+      "activities_must": {
+        "question": "Was haben Sie seit der letzten Befragung unternommen?",
+        "title": "Verpflichtende Aktivität(en), die...",
+        "examples": "(z.B. Arbeit, Haushalt...)",
+        "answer_physical": "Körperlich beanspruchend war(en).",
+        "answer_mental": "Geistig beanspruchend war(en).",
+        "answer_not_challenging": "Gar nicht beanspruchend war(en)",
+        "answer_no_activities": "Keine verpflichtenden Aktivitäten",
+        "next": "Weiter"
+      },
+      "activities_free": {
+        "question": "Was haben Sie seit der letzten Befragung unternommen?",
+        "title": "Freizeitaktivitäten, die...",
+        "examples": "(z.B. Freunde treffen, Hobbies...)",
+        "answer_physical": "Körperlich beanspruchend war(en).",
+        "answer_mental": "Geistig beanspruchend war(en).",
+        "answer_not_challenging": "Gar nicht beanspruchend war(en)",
+        "answer_no_activities": "Keine verpflichtenden Aktivitäten",
+        "next": "Weiter"
+      },
+      "activities_recovery": {
+        "question": "Was haben Sie seit der letzten Befragung zur Erholung gemacht?",
+        "answer_rested": "Mich ausgeruht.",
+        "answer_slept": "Ein Nickerchen / Mittagsschlaf gemacht.",
+        "answer_retreated": "Mich in einen dunklen Raum zurückgezogen.",
+        "answer_other": "Mich anderweitig erholt:",
+        "answer_nothing": "Nichts unternommen, um mich zu erholen.",
+        "next": "Weiter"
+      },
+      "substances": {
+        "question": "Haben Sie in den letzten 4 Stunden eine der folgenden Substanzen konsumiert?",
+        "options": ["Koffein/Teein", "Alkohol", "Nikotin"],
+        "other": "Sonstige Substanzen (auch außerplanmäßige Medizin)",
+        "nothing": "Nein",
+        "next": "Weiter"
+      },
+      "symptoms": {
+        "title": "Symptome Körperlich",
+        "question": "Wie stark erleben Sie gerade die folgenden Symptome?",
+        "stomach_ache": "Bauchschmerzen",
+        "headache": "Kopfschmerzen",
+        "nausea": "Übelkeit",
+        "next": "Weiter"
+      },
+      "mood": {
+        "question": "Wie ist Ihre Stimmung gerade?",
+        "bad": "sehr schlecht",
+        "good": "sehr gut",
+        "next": "Weiter"
+      },
+      "performance": {
+        "title": "",
+        "question": "",
+        "yes": "Ja, das trifft zu",
+        "no": "Nein, das trfft nicht zu",
+        "questions": {
+          "one": "Körperlich fühle ich mich in der Lage, nur wenig zu tun.",
+          "two": "Wenn ich etwas tue, kann ich mich gut darauf konzentrieren.",
+          "three": "Körperlich traue ich mir viel zu.",
+          "four": "Ich kann mich gut konzentrieren.",
+          "five": "Es kostet mich große Anstrengung, mich auf Dinge zu konzentrieren.",
+          "six": "Körperlich fühle ich mich in einer schlechten Verfassung.",
+          "seven": "Meine Gedanken schweifen sehr leicht ab.",
+          "eight": "Körperlich fühle ich mich in einer ausgezeichneten Verfassung."
+        },
+        "next": "Weiter"
+      }
+    }
+  }
+}

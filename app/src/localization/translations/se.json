@@ -1,0 +1,260 @@
+{
+  "language": "Swedish",
+  "components": {
+    "specify": "Vänligen ange...",
+    "alert": {
+      "success": "Kod lyckades",
+      "missing_code": "Ange kod.",
+      "wrong_code": "Koden finns inte",
+      "error": "Fel: {{ error }}",
+      "server_error": "Serverfel",
+      "internal_error": "Internt fel"
+    },
+    "upload": {
+      "no_test": "Inga tester hittades",
+      "successful": "Testerna har laddats upp utan problem",
+      "server_error": "Serverfel",
+      "internal_error": "Internt fel"
+    }
+  },
+  "screens": {
+    "home": {
+      "title": "Start",
+      "welcome": "Hej",
+      "install": "Installera app",
+      "install_ios_hint": "För att installera appen, tryck på delningsikonen längst ned och välj sedan 'Lägg till på hemskärmen'.",
+      "open_app": "Stäng nu webbläsaren och öppna appen.",
+      "enter_code": "kod...",
+      "button": {
+        "start": "Starta test",
+        "validate": "Kontrollera kod",
+        "symptoms": "Ange symtom",
+        "demo": "Starta demo",
+        "tomorrow": "Starta imorgon",
+        "missed": "Missat test",
+        "sleep": "Sömn",
+        "weekly": "Veckobaserad undersökning",
+        "export": "Export"
+      },
+      "permission": {
+        "mic": {
+          "title": "Mikrofonåtkomst krävs",
+          "info": "För några tester måste vi spela in din röst, därför behöver vi åtkomst till din mikrofon.\nVänligen tillåt åtkomst för att fortsätta."
+        },
+        "confirm": "Okej",
+        "error_title": "Ett fel har uppstått",
+        "error_close": "Stäng",
+        "error_refresh": "Ladda om"
+      }
+    },
+    "symptoms": {
+      "title": "Ange fysiska symtom",
+      "add": "Ange symtom",
+      "finish": "Slutför"
+    },
+    "general": {
+      "exit": {
+        "end_button": "Avsluta",
+        "end_title": "Avsluta undersökningen",
+        "end_question": "Vill du verkligen avsluta undersökningen?",
+        "end_confirm_yes": "Avsluta",
+        "end_confirm_no": "Avbryt"
+      },
+      "fatigue": {
+        "title": "Trötthet",
+        "question": "Hur trött känner du dig just nu?",
+        "mental": "Mentalt",
+        "physical": "Fysiskt",
+        "no_fatigue": "Ingen trötthet",
+        "strong_fatigue": "Mycket stark trötthet",
+        "next": "Fortsätt"
+      },
+      "end": {
+        "title": "Test slut",
+        "headline": "Tack för din medverkan!",
+        "text": "Tack för din hjälp.\nDina svar har sparats.",
+        "timesup": "De {{ duration }} minuterna är nu slut.",
+        "button": "Avsluta"
+      },
+      "no_test_previous": {
+        "title": "Inget test förra gången",
+        "question": "Du genomförde inte testet igår kl. {{ time }}. Varför inte?",
+        "answer_fatigue": "För trött",
+        "answer_time": "Ingen tid",
+        "answer_mood": "Ingen lust",
+        "answer_notification_missing": "Ingen avisering mottagen",
+        "answer_notification_missed": "Avisering inte uppmärksammad",
+        "answer_internet": "Inget internet",
+        "answer_other_technical": "Övriga tekniska problem:",
+        "answer_other": "Övrigt:",
+        "answer_no_response": "Vet inte. / Vill inte svara.",
+        "answer_wrong": "Det stämmer inte. Jag har genomfört testet fullständigt.",
+        "next": "Fortsätt"
+      },
+      "last_test_opinion": {
+        "title": "Åsikt om senaste testet",
+        "question_prefix": "Senaste mätningen igår kl. {{ time }}}",
+        "energy": {
+          "question": "Med hänsyn tagen till din energinivå efter den senaste undersökningen så...",
+          "answer_much_shorter": "...borde den har varit mycket kortare.",
+          "answer_shorter": "...borde den har varit något kortare.",
+          "answer_equal": "...var den av rätt längd.",
+          "answer_longer": "...kunde den har varit något längre",
+          "answer_much_longer": "...kunde den har varit vara mycket längre.",
+          "answer_no_response": "Vet inte. / Vill inte svara."
+        },
+        "pem": {
+          "question": "Har den senaste undersökningen utlöst PEM hos dig?",
+          "answer_yes": "Ja",
+          "answer_no": "Nej",
+          "answer_unsure_relation": "Jag har haft PEM, men vet inte om det hade något samband med den senaste undersökningen.",
+          "answer_no_response": "Jag vet inte. / Jag vill inte svara."
+        },
+        "next": "Fortsätt"
+      },
+      "no_test_now": {
+        "title": "Inget test nu",
+        "question": "Varför kan du inte testa nu?",
+        "answer_fatigued": "För trött",
+        "answer_time": "Ingen tid",
+        "answer_mood": "Ingen lust",
+        "answer_other": "Övrigt:",
+        "answer_no_response": "Vet inte. / Vill inte svara.",
+        "back": "Tillbaka",
+        "next": "Fortsätt"
+      }
+    },
+    "pre_test": {
+      "duration": {
+        "title": "Varaktighet",
+        "question": "Hur många minuter tror du att du har energi för att svara på enkäten?",
+        "hint": "Enkäten avslutas efter denna tid (+- 30 sekunder).",
+        "minutes": "Minuter",
+        "no_time": "Jag kan inte genomföra någon undersökning just nu."
+      },
+      "symptoms": {
+        "title": "Symtom",
+        "question": "Hur stora upplever du följande symtom just nu?",
+        "concentration": "Koncentrations\u00ADsvårigheter",
+        "wordfinding": "Svårigheter att hitta ord",
+        "memory": "Minnes\u00ADsvårigheter",
+        "no_symptoms": "Inte alls",
+        "strong_symptoms": "Mycket stora",
+        "next": "Fortsätt"
+      }
+    },
+    "test": {
+      "memory": {
+        "title": "Kom ihåg ord",
+        "introduction": "Kom ihåg följande ord väl.\n\nSedan ska du räkna upp alla ord som du kommer ihåg.",
+        "start_text": "Testet börjar om",
+        "button": "Redo"
+      },
+      "memory_repeat": {
+        "title": "Memory Repeat",
+        "introduction": "När du är redo trycker du på 'Starta inspelning'.",
+        "recording_hint": "Nämn alla ord du kommer ihåg.",
+        "recording_start": "Starta inspelning",
+        "recording_confirm_hint": "Är du verkligen klar?\nDå kan du trycka på 'Klar' igen.\n\nAnnars nämn alla resterande ord som du kommer ihåg.",
+        "recording_end": "Klar",
+        "end_title": "Inspelningen avslutad.",
+        "end_text": "Inspelningen har sparats.",
+        "next": "Nästa"
+      },
+      "matching": {
+        "title": "Matchning",
+        "introduction": "Matcha följande symboler och siffror.",
+        "start_text": "Testet börjar om",
+        "button": "Start",
+        "next": "Nästa",
+        "timesup_title": "Tiden är ute.",
+        "timesup_text": "Inmatningarna har sparats."
+      },
+      "stroop": {
+        "title": "Stroop",
+        "introduction": "Läs ordet högt.",
+        "start": "Start",
+        "start_text": "Inspelningen startar om",
+        "next": "Nästa",
+        "timesup_title": "Tiden är ute.",
+        "timesup_text": "Inspelningen är klar och har sparats."
+      }
+    },
+    "post_test": {
+      "sleep": {
+        "question1": "Hur länge sov du i natt?",
+        "answer_pre": "Ungefär",
+        "answer_post": "Timmar",
+        "question2": "Hur sov du i natt?",
+        "next": "Fortsätt"
+      },
+      "activities_must": {
+        "question": "Vad har du gjort sedan den senaste undersökningen?",
+        "title": "Nödvändig(a) aktivitet(er) som...",
+        "examples": "(t.ex. arbete, hushållsarbete...)",
+        "answer_physical": "...var fysiskt ansträngande.",
+        "answer_mental": "...var mentalt ansträngande.",
+        "answer_not_challenging": "...inte var ansträngande alls.",
+        "answer_no_activities": "Inga nödvändiga aktiviteter",
+        "next": "Fortsätt"
+      },
+      "activities_free": {
+        "question": "Vad har du gjort sedan den senaste undersökningen?",
+        "title": "Fritidsaktiviteter som...",
+        "examples": "(t.ex. träffa vänner, hobbyer...)",
+        "answer_physical": "...var fysiskt ansträngande.",
+        "answer_mental": "...var mentalt ansträngande.",
+        "answer_not_challenging": "...inte var ansträngande.",
+        "answer_no_activities": "Inga fritidsaktiviteter",
+        "next": "Fortsätt"
+      },
+      "activities_recovery": {
+        "question": "Vad har du gjort för att återhämta dig sedan den senaste undersökningen?",
+        "answer_rested": "Vilat mig.",
+        "answer_slept": "Tagit en tupplur/middagslur.",
+        "answer_retreated": "Vistats mig i ett mörkt rum.",
+        "answer_other": "Återhämtat mig på annat sätt:",
+        "answer_nothing": "Inte gjort någonting för att återhämta mig.",
+        "next": "Fortsätt"
+      },
+      "substances": {
+        "question": "Har du konsumerat någon av följande substanser under de senaste 4 timmarna?",
+        "options": ["Koffein/Tein", "Alkohol", "Nikotin"],
+        "other": "Övriga substanser (även icke-planerade läkemedel)",
+        "nothing": "Nej",
+        "next": "Fortsätt"
+      },
+      "symptoms": {
+        "title": "Fysiska symptom",
+        "question": "Hur stora upplever du följande symptom just nu?",
+        "stomach_ache": "Magont",
+        "headache": "Huvudvärk",
+        "nausea": "Illamående",
+        "next": "Fortsätt"
+      },
+      "mood": {
+        "question": "Hur är ditt humör just nu?",
+        "bad": "Mycket dåligt",
+        "good": "Mycket bra",
+        "next": "Fortsätt"
+      },
+      "performance": {
+        "title": "",
+        "question": "",
+        "yes": "Ja, det stämmer.",
+        "no": "Nej, det stämmer inte.",
+        "questions": {
+          "one": "Kroppsligt känner jag mig bara i stånd att göra väldigt lite.",
+          "two": "När jag gör något kan jag koncentrera mig på det.",
+          "three": "Kroppsligt orkar jag mycket.",
+          "four": "Jag har lätt för att koncentrera mig.",
+          "five": "Jag använder mycket kraft för att koncentrera mig på saker.",
+          "six": "Kroppsligt känner jag mig i dålig form.",
+          "seven": "Mina tankar far lätt iväg.",
+          "eight": "Kroppsligt känner jag mig i utmärkt form."
+        },
+        "next": "Fortsätt"
+      }
+    }
+  }
+}
