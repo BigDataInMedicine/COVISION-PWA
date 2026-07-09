@@ -1,48 +1,41 @@
 <?php
-/**
- * API Endpoint: Check Test Code
- *
- * Validates a test code and returns associated metadata.
- * Supports both real and demo data.
- * 
- * Features:
- * - CORS headers for cross-origin requests
- * - UTF-8 encoding
- * - CSV-based data storage
- * - Fallback to demo data if code not found
- * - Returns JSON with full metadata
- * 
- * Used in the client-side `validateCode` function to authenticate users.
- */
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
+header('Content-Type: application/json; charset=utf-8');
 
-// File paths for databases
-$filename = __DIR__ . '/database/database_demo.csv';
+// Database files
+$filename = __DIR__ . '/database/database.csv';
+$filenameDemo = __DIR__ . '/database/database_demo.csv';
 
-/**
- * Reads a CSV file and converts it to an associative array.
- * 
- * @param string $filename Path to the CSV file
- * @return array Array of associative arrays (one per row)
- * 
- * Skips header row. Maps key-value pairs from alternating columns (key, value).
- * Returns empty array if file does not exist or is unreadable.
- */
-function readCsv($filename) {
+/* =====================================================
+   Read a CSV database file
+   -----------------------------------------------------
+   Each row is converted into an associative array.
+
+   Fixed columns:
+   - key
+   - language
+   - timestamp
+
+   Remaining columns are interpreted as key/value pairs:
+       fieldName1,value1,fieldName2,value2,...
+===================================================== */
+
+function readCsv($filename)
+{
     if (!file_exists($filename)) {
         return [];
     }
+
     $handle = fopen($filename, "r");
+
     if (!$handle) {
         return [];
     }
 
-    // Skip header row
-    fgetcsv($handle, 0, ",");
-
     $dataArray = [];
+
     while (($line = fgetcsv($handle, 0, ",")) !== false) {
         $obj = [
             "key" => $line[0] ?? null,
@@ -50,48 +43,100 @@ function readCsv($filename) {
             "timestamp" => $line[2] ?? null,
         ];
 
+        // Convert the remaining columns into dynamic key/value pairs.
         $count = count($line);
         for ($i = 3; $i < $count; $i += 2) {
             $objKey = $line[$i] ?? null;
             $objValue = ($i + 1) < $count ? $line[$i + 1] : null;
+
             if ($objKey !== null && $objValue !== null) {
                 $obj[$objKey] = $objValue;
             }
         }
+
         $dataArray[] = $obj;
     }
+
     fclose($handle);
 
     return $dataArray;
 }
 
-// Get test code from query parameter
-$code = $_GET['code'] ?? null;
-header('Content-Type: application/json; charset=utf-8');
+/* =====================================================
+   Validate request parameters
+   -----------------------------------------------------
+   Expected GET parameter:
+   - code : Marker identifier to search for
+===================================================== */
 
-// Validate input
+$code = $_GET['code'] ?? null;
+
 if ($code === null) {
     http_response_code(400);
-    echo json_encode(["error" => "Kein Code angegeben"]);
+    echo json_encode(["error" => "The required parameter 'code' is missing."]);
     exit;
 }
 
-// Try to find code in real database
+/* =====================================================
+   Search the production database
+   -----------------------------------------------------
+   The production database is searched first. If no
+   matching marker identifier is found, the demo database
+   is searched as a fallback.
+===================================================== */
+
 $dataArray = readCsv($filename);
 $result = null;
+
 foreach ($dataArray as $item) {
-    if (isset($item['markerIdentifier']) && $item['markerIdentifier'] === $code) {
+    if (
+        isset($item['markerIdentifier']) &&
+        $item['markerIdentifier'] === $code
+    ) {
         $result = $item;
         break;
     }
 }
 
-// Handle not found
+/* =====================================================
+   Search the demo database
+   -----------------------------------------------------
+   Only executed when no matching participant was found
+   in the production database.
+===================================================== */
+
+if ($result === null) {
+    $dataArrayDemo = readCsv($filenameDemo);
+
+    foreach ($dataArrayDemo as $item) {
+        if (
+            isset($item['markerIdentifier']) &&
+            $item['markerIdentifier'] === $code
+        ) {
+            $result = $item;
+            break;
+        }
+    }
+}
+
+/* =====================================================
+   Return the search result
+   -----------------------------------------------------
+   If no participant was found, return HTTP 404.
+   Otherwise return the complete participant record
+   as formatted JSON.
+===================================================== */
+
 if ($result === null) {
     http_response_code(404);
-    echo json_encode(["error" => "Code nicht gefunden"]);
+
+    echo json_encode([
+        "error" => "No participant found for the specified code."
+    ]);
 } else {
-    // Return full metadata with pretty-print and Unicode support
-    echo json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+    echo json_encode(
+        $result,
+        JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
+    );
 }
 ?>
