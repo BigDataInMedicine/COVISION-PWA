@@ -374,8 +374,7 @@ After entering the demo mode, buttons for the following functions become availab
 
 If you use this project in your research, please cite:
 
-- Weber, M., et al. _COVISION: A Mobile Research App for Longitudinal Monitoring of Post-COVID Fatigue_. _Studies in Health Technology and Informatics_. IOS Press.  
-  DOI: [10.3233/SHTI260498](https://doi.org/10.3233/SHTI260498)
+- Weber M, Knak AK, Wulff A. A Mobile Research App for Post-COVID Fatigue Monitoring. Stud Health Technol Inform. 2026 May 21;336:1614-1618. doi: [10.3233/SHTI260498](https://doi.org/10.3233/SHTI260498). PMID: 42175169.
 
 ---
 
