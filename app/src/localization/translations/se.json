@@ -1,5 +1,6 @@
 {
   "language": "Swedish",
+  "support_mail": "annkathrin.knak@ki.se",
   "components": {
     "specify": "Vänligen ange...",
     "alert": {
@@ -25,17 +26,39 @@
       "install_ios_hint": "För att installera appen, tryck på delningsikonen längst ned och välj sedan 'Lägg till på hemskärmen'.",
       "open_app": "Stäng nu webbläsaren och öppna appen.",
       "enter_code": "kod...",
-      "button": {
-        "start": "Starta test",
+      "buttons": {
+        "start": "Starta Test",
         "validate": "Kontrollera kod",
+        "phoneNumber": "Ange telefonnummer",
         "symptoms": "Ange symtom",
-        "demo": "Starta demo",
+        "adapt_symptoms": "Anpassa symtom",
+        "start_demo": "Starta guiden",
+        "repeat_demo": "Starta om guiden",
+        "repeat_matching": "Starta om “Välja symboler”",
+        "repeat_stroop": "Starta om  “Namnge färgerna”",
+        "repeat_memory": "Starta om  “Komma ihåg ord”",
         "tomorrow": "Starta imorgon",
         "missed": "Missat test",
         "sleep": "Sömn",
-        "weekly": "Veckobaserad undersökning",
-        "export": "Export"
+        "weekly": "Veckovisa mätningar",
+        "export": "Export",
+        "demoChapters": {
+          "welcome": "Välkommen",
+          "duration": "Varaktighet",
+          "wellbeing": "Fatigue & Kognition",
+          "matching": "Test: Välja symboler",
+          "stroop": "Test: Namnge färgerna",
+          "memory": "Test: Komma ihåg ord",
+          "activities": "Questions: Activities",
+          "symptoms": "Questions: Symptoms",
+          "export": "Export",
+          "skipAndStop": "Hoppa över & Avsluta test"
+        }
       },
+      "daily_tests_over": "De dagliga testerna är avslutade.",
+      "reminder_weekly": "Kom ihåg att fylla i den veckovisa enkäten.",
+      "reminder_export": "Kom ihåg att exportera dina data en sista gång.",
+      "deinstall_app": "Du har slutfört alla uppgifter i appen. Du kommer att få all fortsatt information via e‑post. Du kan nu avinstallera appen.",
       "permission": {
         "mic": {
           "title": "Mikrofonåtkomst krävs",
@@ -47,11 +70,157 @@
         "error_refresh": "Ladda om"
       }
     },
-    "symptoms": {
-      "title": "Ange fysiska symtom",
-      "add": "Ange symtom",
-      "finish": "Slutför"
+    "demo": {
+      "alerts": {
+        "unlimited": "I den här guiden låtsas att du vill välja obegränsad varaktighet.",
+        "skip": "I den här guiden låtsas att du vill hoppa över bedömningen.",
+        "finish": "I den här guiden låtsas att du vill avsluta bedömningen.",
+        "matching_first": "I det här exemplet ska du trycka på knappen uppe till höger med + på.",
+        "alertMatching2": "I det här exemplet ska du trycka på knappen uppe till vänster med > på.",
+        "alertMatching3": "I det här exemplet ska du trycka på knappen högst upp i mitten med ) på."
+      },
+      "instructions": {
+        "welcome": "Välkommen till guiden!",
+        "startButton1": "Låt oss låtsas att du just har fått ett sms.",
+        "startButton2": "En knapp kommer att vara synlig under den kommande halvtimmen.",
+        "startButton3": "<strong>Klicka</strong> på den för att starta bedömningen.",
+
+        "microphone1": "Vissa test kräver <strong>ljudinspelning</strong>.",
+        "microphone2": "Beroende på din enhet kan du bli ombedd att tillåta <strong>mikrofonåtkomst</strong>.",
+        "microphone3": "<strong>När ditt ljud spelas in</strong> visas en <strong>mikrofonikon</strong> högst upp i mitten av skärmen.",
+
+        "selectDuration1": "I början av varje bedömning kan du välja den <strong>maximala varaktigheten</strong>.",
+        "selectDuration2": "Bedömningen <strong>avslutas automatiskt</strong> efter denna tid.",
+        "selectDuration3": "Välj alltid varaktigheten utifrån din <strong>aktuella trötthet</strong>.",
+        "selectDuration4": "<strong>Välj ”obegränsad”</strong> nu i guiden.",
+        "preQuestions1": "De första frågorna rör din aktuella trötthet och ditt kognitiva tillstånd.",
+        "preQuestions2": "Du kommer att få <strong>skatta symtom</strong> eller <strong>instämma i påståenden</strong> på en <strong>siffer-skala</strong>.",
+        "preQuestions3": "Just nu kan du <strong>ange vilka svar du vill</strong>.",
+
+        "cognitiveTestsIntro1": "Det finns <strong>tre kognitiva tester</strong> i de dagliga bedömningarna.",
+
+        "matchingIntro1": "I den här handledningen är det första testet ”Välja symboler”",
+        "matchingExample1": "Tryck på knappen med den symbol som motsvarar siffran.",
+        "matchingExplain1": "Målet är att få <strong>så många rätt som möjligt</strong>.",
+        "matchingExplain2": "Vi provar i 30 sekunder idag.",
+        "matchingExplain3": "Från och med i morgon ser testet likadant ut, men tar <strong>2 minuter</strong>.",
+
+        "stroopIntro1": "Den andra uppgiften är ”Namnge färgerna”",
+        "stroopExplain1": "Du kommer att se färgord skrivna i en annan färg.",
+        "stroopExplain2": "Din uppgift är att <strong>säga den färg ordet är skrivet i</strong>.",
+        "stroopExplain3": "Du ska <strong>inte läsa</strong> ordet.",
+        "stroopExplain4": "Du kan tala när det finns en <strong>mikrofonikon högst upp i mitten</strong> av skärmen.",
+        "stroopExplain5": "Vi provar.",
+        "stroopExample1": "Säg ”blå”. Klicka sedan på ”nästa”.",
+        "stroopExample2": "Säg ”gul”. Klicka sedan på ”nästa”.",
+        "stroopExample3": "Säg ”grön”. Klicka sedan på ”nästa”.",
+        "stroopExplain8": "Målet är att få <strong>så många rätt som möjligt</strong>.",
+        "stroopExplain9": "Vi provar i 30 sekunder idag.",
+        "stroopExplain10": "Från och med i morgon ser testet likadant ut, men tar <strong>2 minuter</strong>.",
+        "microphoneTitle": "Ljudinspelning krävs.",
+        "microphoneHint": "Beroende på din enhet kan du nu bli ombedd att ge mikrofonåtkomst. Annars klicka på ”nästa”.",
+
+        "memoryIntro1": "Den tredje uppgiften är ”Komma ihåg ord”.",
+        "memoryExplain1": "En <strong>lista med ord</strong> visas för dig <strong>ett i taget</strong>.",
+        "memoryExplain2": "Din uppgift är att <strong>komma ihåg</strong> dem.",
+        "memoryExplain3": "I slutet ombeds du att <strong>säga så många högt som du kan</strong>.",
+        "memoryExplain4": "Vi provar med 5 ord.",
+        "memoryExplain5": "Orden var <strong>mandarin, skola, fjäril, barn</strong> och <strong>penna</strong>.",
+        "memoryExplain6": "Det är <strong>inte viktigt</strong> i vilken <strong>ordning</strong> du säger dem.",
+        "memoryExplain7": "Från och med i morgon kommer det att vara <strong>nio ord</strong>.",
+        "memoryExplain8": "Oroa dig inte om du inte minns allihop. Det är helt normalt.",
+
+        "cognitiveTestsOutro1": "De här tre testerna kommer <strong>alltid i olika ordning</strong>.",
+
+        "physicalSymptoms1": "Därefter ombeds du att <strong>skatta dina aktuella symtom</strong>.",
+        "physicalSymptoms2": "Om du <strong>inte upplever</strong> något av de föreslagna symtomen kan du <strong>ange 0</strong>.",
+        "physicalSymptoms3": "Lägg gärna <strong>till symtom</strong> du upplever just nu som inte redan täcks av andra frågor.",
+        "physicalSymptoms4": "Du kan ändra listan med föreslagna symtom i appen när som helst.",
+        "activities1": "Nästa steg är frågor om de aktiviteter du har gjort sedan den senaste bedömningen.",
+        "activities2": "Du kommer att få ange om de var <strong>mentalt eller fysiskt ansträngande</strong>.",
+        "activities3": "Det här beror helt på din <strong>egen upplevelse</strong> och kan också variera från dag till dag.",
+        "activities4": "Till exempel kan matlagning vara fysiskt ansträngande, eller mentalt ansträngande, eller bådadera, eller inte alls ansträngande.",
+        "activities5": "Du får också ange om aktiviteterna var <strong>obligatoriska eller fritidsaktiviteter</strong>.",
+        "activities6": "Obligatoriskt betyder att du gör det <strong>för att du måste</strong> (t.ex. arbete, hushållsarbete, studier, läkarbesök).",
+        "activities7": "Fritidsaktiviteter är sådant du gör <strong>för nöjes skull</strong> (t.ex. träffa vänner, hobbier).",
+        "postQuestions1": "Gå nu igenom följande frågor för att se om allt är tydligt för dig.",
+        "postQuestions2": "I slutet får du frågor om din <strong>trötthet igen</strong> för att se om den har förändrats.",
+        "evaluateLastTest1": "På den allra sista sidan ombeds du reflektera över hur <strong>bedömningen före den här</strong> påverkade dig.",
+
+        "export1": "När du har samlat in ny data visas en <strong>exportknapp</strong> i appen.",
+        "export2": "Om du klickar på den skickas all ny data <strong>till studieteamet</strong>.",
+        "export3": "Detta kräver en <strong>internetanslutning</strong>.",
+        "export4": "Låt oss prova.",
+        "export5": "Du kan <strong>själv bestämma</strong> när du vill ladda upp dina data.",
+        "export6": "Du bör exportera dina data <strong>minst en gång i slutet av studien</strong>.",
+        "almostDone1": "Innan vi avslutar den här guiden vill vi visa två ytterligare funktioner.",
+        "skip1": "Om du känner att det behövs kan du helt <strong>hoppa över en bedömning</strong>.",
+        "skip2": "Låt oss prova",
+        "finish1": "Du kan också <strong>avbryta mitt i en bedömning</strong> om du känner att det behövs.",
+        "finish2": "Prova genom att klicka på <strong>dörren uppe till höger</strong>.",
+        "demoDone1": "Nu är du klar med guiden för idag",
+        "demoDone2": "Om du har frågor innan testerna startar i morgon, skicka gärna ett mejl till <email>{{ addr }}</email>",
+        "demoDone3": "Tack för din hjälp!"
+      },
+      "stimuli": {
+        "memory": ["mandarin", "skola", "fjäril", "barn", "penna"]
+      }
     },
+    "phoneNumber": {
+      "instruction": "Vänligen ange telefonnummer av telefonen du använder just nu.",
+      "label": "Telefonnummer"
+    },
+    "phoneNumberCheck": {
+      "instruction": "Du bör få ett SMS med en kod. Vänligen ange koden du har fått nedan. Om du inte får något meddelande inom en minut, kontrollera att telefonnumret du angav på föregående sida är korrekt.",
+      "label": "Code",
+      "attempts_error": "Du har bara {{attempts_maximum}} chanser att skriva in rätt telefonnummer. Du har {{attempts_left}} försök kvar.",
+      "no_attempts_left": "Du har nått det maximala antalet försök att skriva in ditt telefonnummer. Om du vill fortsätta med studien, vänligen kontakta studieteamet."
+    },
+    "symptoms": {
+      "title": "symptom",
+      "questionMC": "Har du upplevt något av följande symptom under de senaste 4 veckorna?",
+      "questionOther": "Vänligen ange eventuella ytterligare symtom som du har upplevt under de senaste 4 veckorna och som inte fanns med på listan",
+      "options": [
+        "Buksmärta",
+        "Menstruationsproblem",
+        "Förändrad lukt/smak",
+        "Ångest",
+        "Dimsyn",
+        "Bröstsmärta",
+        "Kognitiva svårigheter/hjärndimma",
+        "Hosta",
+        "Depression/Nedstämdhet",
+        "Yrsel",
+        "Trötthet",
+        "Intermittent/fluktuerande feber",
+        "Gastrointestinala problem (diarré, förstoppning, sura uppstötningar)",
+        "Huvudvärk",
+        "Minnesproblem",
+        "Ledvärk",
+        "Muskelvärk/kramper",
+        "Nervsmärta",
+        "Nyuppkomna allergier",
+        "Stickningar",
+        "Post-exertional malaise/ansträngningsutlöst försämring",
+        "Andnöd",
+        "Sömnstörningar",
+        "Takykardi/hjärtklappningar",
+        "Tinnitus och andra hörselproblem"
+      ],
+      "excludeFromDaily": [
+        "Förändrad lukt/smak",
+        "Ångest",
+        "Kognitiva svårigheter/hjärndimma",
+        "Depression/Nedstämdhet",
+        "Trötthet",
+        "Minnesproblem",
+        "Nyuppkomna allergier",
+        "Sömnstörningar"
+      ],
+      "hint": "*Symtom som visas med ljus text tas bort från dina dagliga testenkäter.",
+      "next": "Fortsätt"
+    },
+    "installation_finished": "Du är nu klar med att ställa in appen. I morgon visas knappen för guiden här.",
     "general": {
       "exit": {
         "end_button": "Avsluta",
@@ -59,6 +228,11 @@
         "end_question": "Vill du verkligen avsluta undersökningen?",
         "end_confirm_yes": "Avsluta",
         "end_confirm_no": "Avbryt"
+      },
+      "help": {
+        "title": "Problem eller frågor?",
+        "text": "Skicka gärna ett mejl till studieteamet. Vi försöker svara så snabbt som möjligt.",
+        "confirm": "Stäng"
       },
       "fatigue": {
         "title": "Trötthet",
@@ -78,7 +252,9 @@
       },
       "no_test_previous": {
         "title": "Inget test förra gången",
-        "question": "Du genomförde inte testet igår kl. {{ time }}. Varför inte?",
+        "question": "Du genomförde inte testet {{ day }} kl. {{ time }}. Varför inte?",
+        "label_today": "idag",
+        "label_yesterday": "igår",
         "answer_fatigue": "För trött",
         "answer_time": "Ingen tid",
         "answer_mood": "Ingen lust",
@@ -89,6 +265,7 @@
         "answer_other": "Övrigt:",
         "answer_no_response": "Vet inte. / Vill inte svara.",
         "answer_wrong": "Det stämmer inte. Jag har genomfört testet fullständigt.",
+
         "next": "Fortsätt"
       },
       "last_test_opinion": {
@@ -108,7 +285,8 @@
           "answer_yes": "Ja",
           "answer_no": "Nej",
           "answer_unsure_relation": "Jag har haft PEM, men vet inte om det hade något samband med den senaste undersökningen.",
-          "answer_no_response": "Jag vet inte. / Jag vill inte svara."
+          "answer_no_response": "Jag vet inte. / Jag vill inte svara.",
+          "explain": "*PEM = Post-exertional malaise"
         },
         "next": "Fortsätt"
       },
@@ -129,14 +307,15 @@
         "title": "Varaktighet",
         "question": "Hur många minuter tror du att du har energi för att svara på enkäten?",
         "hint": "Enkäten avslutas efter denna tid (+- 30 sekunder).",
+        "unlimited": "obegränsat",
         "minutes": "Minuter",
         "no_time": "Jag kan inte genomföra någon undersökning just nu."
       },
       "symptoms": {
-        "title": "Symtom",
+        "title": "Symptom",
         "question": "Hur stora upplever du följande symtom just nu?",
         "concentration": "Koncentrations\u00ADsvårigheter",
-        "wordfinding": "Svårigheter att hitta ord",
+        "wordfinding": "svårigheter att \u00ADhitta ord",
         "memory": "Minnes\u00ADsvårigheter",
         "no_symptoms": "Inte alls",
         "strong_symptoms": "Mycket stora",
@@ -162,7 +341,7 @@
         "next": "Nästa"
       },
       "matching": {
-        "title": "Matchning",
+        "title": "Välja symboler",
         "introduction": "Matcha följande symboler och siffror.",
         "start_text": "Testet börjar om",
         "button": "Start",
@@ -171,8 +350,8 @@
         "timesup_text": "Inmatningarna har sparats."
       },
       "stroop": {
-        "title": "Stroop",
-        "introduction": "Läs ordet högt.",
+        "title": "Namnge färgerna",
+        "introduction": "Säga den färg ordet är skrivet i högt.",
         "start": "Start",
         "start_text": "Inspelningen startar om",
         "next": "Nästa",
@@ -186,7 +365,13 @@
         "answer_pre": "Ungefär",
         "answer_post": "Timmar",
         "question2": "Hur sov du i natt?",
+        "bad": "Mycket dåligt",
+        "good": "Mycket bra",
         "next": "Fortsätt"
+      },
+      "activities": {
+        "when_today": "Idag",
+        "when_yesterday": "Igår"
       },
       "activities_must": {
         "question": "Vad har du gjort sedan den senaste undersökningen?",
@@ -230,12 +415,17 @@
         "stomach_ache": "Magont",
         "headache": "Huvudvärk",
         "nausea": "Illamående",
+        "add_symptoms_button": "Lägg till symptom",
+        "add_symptoms_text": "Beteckning eller beskrivning",
         "next": "Fortsätt"
       },
       "mood": {
-        "question": "Hur är ditt humör just nu?",
-        "bad": "Mycket dåligt",
-        "good": "Mycket bra",
+        "question": "Hur mycket upplever du föjande känslor just nu?",
+        "label_depression": "Nedstämdhet",
+        "label_anxiety": "Oro",
+        "label_irritation": "Irritation",
+        "bad": "Mycket",
+        "good": "Inte alls",
         "next": "Fortsätt"
       },
       "performance": {
@@ -255,6 +445,61 @@
         },
         "next": "Fortsätt"
       }
+    },
+    "weekly": {
+      "work": {
+        "questionTotal": "Hur många timmar har du totalt arbetat under de senaste 7 dagarna i ditt arbete, din utbildning, dina studier etc.?",
+        "questionHome": "Hur många av dessa timmar arbetade du hemifrån?",
+        "hint": "Vänligen inkludera även extrajobb och övertid.",
+        "options": [
+          "Inte alls",
+          "Gäller inte mig.",
+          "Jag vet inte/Jag vill inte svara."
+        ],
+        "hours": "Timmar:",
+        "next": "Fortsätt"
+      },
+      "ill": {
+        "questionOverall": "Var du sjuk under de senaste 7 dagarna?",
+        "hint": "Utöver dina post-covid besvär, t.ex. förkylning, mag-tarminfektion",
+        "optionsOverall": ["Ja", "Nej", "Jag vet inte/Jag vill inte svara."],
+        "questionWhich": "Vilken(a) sjukdom(ar) handlade det om?",
+        "illnessWhich": "Sjukdomar:",
+        "no_answer": "Jag vet inte/Jag vill inte svara.",
+        "questionDays": "Vilka dagar under de senaste 7 dagarna var du sjuk?",
+        "optionsDays": [
+          "Måndag",
+          "Tisdag",
+          "Onsdag",
+          "Torsdag",
+          "Fredag",
+          "Lördag",
+          "Söndag"
+        ],
+        "next": "Fortsätt"
+      },
+      "mens": {
+        "questionOverall": "Hade du din menstruation under de senaste 7 dagarna? (Period/mensblödning)",
+        "optionsOverall": [
+          "Ja",
+          "Nej",
+          "Gäller inte mig.",
+          "Jag vet inte/Jag vill inte svara."
+        ],
+        "no_answer": "Jag vet inte/Jag vill inte svara.",
+        "questionDays": "Vilka dagar under de senaste 7 dagarna hade du din menstruation? (Period/mensblödning)",
+        "optionsDays": [
+          "Måndag",
+          "Tisdag",
+          "Onsdag",
+          "Torsdag",
+          "Fredag",
+          "Lördag",
+          "Söndag"
+        ],
+        "next": "Fortsätt"
+      },
+      "next": "Fortsätt"
     }
   }
 }

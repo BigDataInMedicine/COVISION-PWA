@@ -21,7 +21,16 @@ import NoTestNowScreen from './screens/general/noTestNow';
 import LastTestOpinionScreen from './screens/general/lastTestOpinion';
 import QuestionnaireSleepScreen from './screens/general/sleep';
 import QuestionnairePerformanceScreen from './screens/postTest/performance';
-import SymptomsScreen from './screens/general/symptoms';
+import PhoneInputScreen from './screens/setup/phoneNumber';
+import PhoneCheckScreen from './screens/setup/phoneNumberCheck';
+import SymptomsScreen from './screens/setup/symptoms';
+
+import DemoInstructionScreen from './screens/demo/demoInstruction';
+import MatchingDemoScreen from './screens/demo/matchingDemo';
+import StroopDemoScreen from './screens/demo/stroopDemo';
+import WeeklyWorkScreen from './screens/weekly/work';
+import WeeklyIllScreen from './screens/weekly/ill';
+import WeeklyMenstruationScreen from './screens/weekly/menstruation';
 
 const App: React.FC = () => {
   return (
@@ -34,7 +43,16 @@ const App: React.FC = () => {
           <Route path="/last-test-opinion" element={<LastTestOpinionScreen />} />
           <Route path="/no-test-now" element={<NoTestNowScreen />} />
           <Route path="/test-end" element={<TestEndScreen />} />
+
+          {/*Setup*/}
+          <Route path="/phoneNumber" element={<PhoneInputScreen />} />
+          <Route path="/phoneNumberCheck" element={<PhoneCheckScreen />} />
           <Route path="/symptoms" element={<SymptomsScreen />} />
+
+          {/*Demo*/}
+          <Route path="/d/instructions" element={<DemoInstructionScreen />} />
+          <Route path="/d/matchingDemo" element={<MatchingDemoScreen />} />
+          <Route path="/d/stroopDemo" element={<StroopDemoScreen />} />
 
           {/* Pre Test */}
           <Route path="/q/duration" element={<QuestionnaireDurationScreen />} />
@@ -54,6 +72,11 @@ const App: React.FC = () => {
           <Route path="/q/substances" element={<QuestionnaireSubstancesScreen />} />
           <Route path="/q/symptoms-physical" element={<QuestionnaireSymptomsPhysicalScreen />} />
           <Route path="/q/performance" element={<QuestionnairePerformanceScreen />} />
+
+          {/* Weekly */}
+          <Route path="/w/work" element={<WeeklyWorkScreen />} />
+          <Route path="/w/ill" element={<WeeklyIllScreen />} />
+          <Route path="/w/menstruation" element={<WeeklyMenstruationScreen />} />
 
           {/* Redirect unknown routes to home */}
           <Route path="*" element={<Navigate to="/" />} />

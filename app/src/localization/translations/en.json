@@ -1,5 +1,8 @@
 {
   "language": "English",
+  "general": {
+    "support_mail": "annkathrin.knak@ki.se"
+  },
   "components": {
     "specify": "Please specify...",
     "alert": {
@@ -25,17 +28,39 @@
       "install_ios_hint": "To install the app, tap the share icon at the bottom and then select 'Add to Home Screen'.",
       "open_app": "Please close your browser now and open the app.",
       "enter_code": "code...",
-      "button": {
+      "buttons": {
         "start": "Start Test",
         "validate": "Check Code",
+        "phoneNumber": "Type in phone number",
         "symptoms": "Enter Symptoms",
-        "demo": "Start Demo",
+        "adapt_symptoms": "Adapt symptoms",
+        "start_demo": "Start Tutorial",
+        "repeat_demo": "Repeat Tutorial",
+        "repeat_matching": "Repeat “Selecting Symbols”",
+        "repeat_stroop": "Repeat “Naming Colors”",
+        "repeat_memory": "Repeat “Remember Words”",
         "tomorrow": "Start Tomorrow",
         "missed": "Missed Test",
         "sleep": "Sleep",
         "weekly": "Weekly Survey",
-        "export": "Export"
+        "export": "Export",
+        "demoChapters": {
+          "welcome": "Welcome",
+          "duration": "Duration",
+          "wellbeing": "Fatigue & Cognition",
+          "matching": "Test: Selecting Symbols",
+          "stroop": "Test: Naming Colors",
+          "memory": "Test: Remember Words",
+          "activities": "Questions: Activities",
+          "symptoms": "Questions: Symptoms",
+          "export": "Export",
+          "skipAndStop": "Skip & Stop Test"
+        }
       },
+      "daily_tests_over": "The daily tests are over.",
+      "reminder_weekly": "Please remember to do the weekly survey.",
+      "reminder_export": "Please remember to export your data one final time.",
+      "deinstall_app": "You have completed all the tasks in the App. You will receive all further instructions via e-mail. You can deinstall the app now.",
       "permission": {
         "mic": {
           "title": "Microphone access required",
@@ -47,11 +72,156 @@
         "error_refresh": "Reload"
       }
     },
-    "symptoms": {
-      "title": "Enter physical symptoms",
-      "add": "Enter symptom",
-      "finish": "Finish"
+    "demo": {
+      "alerts": {
+        "unlimited": "For the sake of the demo, please pretend you would like to select unlimited duration.",
+        "skip": "For the sake of the demo, please pretend you would like to skip the assessment.",
+        "finish": "For the sake of the demo, please pretend you would like to finish the assessment.",
+        "matching_first": "In this example you have to press the button in the upper right corner with the + on it."
+      },
+      "instructions": {
+        "welcome": "Welcome to the Tutorial!",
+        "startButton1": "Let‘s pretend you just received a text message",
+        "startButton2": "A button would be visible for the next half hour",
+        "startButton3": "<strong>Click</strong> on it to start the assessment",
+
+        "microphone1": "Some of the tests require <strong>audio recordings</strong>",
+        "microphone2": "Depending on your device, you might be asked to allow <strong>microphone access</strong>",
+        "microphone3": "<strong>Whenever your audio is recorded</strong>, you will see a <strong>microphone icon</strong> in the top middle of the screen",
+
+        "selectDuration1": "In the beginning of each assessment you can select the <strong>maximal duration</strong>.",
+        "selectDuration2": "The assessment will <strong>automatically end</strong> after this time",
+        "selectDuration3": "Please always select the duration according to your <strong>current fatigue</strong>",
+        "selectDuration4": "<strong>Select „unlimited“</strong> now for the tutorial",
+        "preQuestions1": "The first questions concern your current fatigue and cognitive state",
+        "preQuestions2": "You will be asked to <strong>rate symptoms</strong> or <strong>your agreement with statements</strong> on a <strong>scale with numbers</strong>",
+        "preQuestions3": "For now you can <strong>put in any answer you like</strong>",
+
+        "cognitiveTestsIntro1": "There are <strong>three cognitive tests</strong> in the daily assessments.",
+
+        "matchingIntro1": "In this Guide the first test will be “selecting symbols”",
+        "matchingExample1": "Press on the button with the symbol matching the number",
+        "matchingExplain1": "Your aim is to get <strong>as many correct answers as possible<strong>",
+        "matchingExplain2": "Let’s try it for 30 seconds today",
+        "matchingExplain3": "From tomorrow on the test will look exactly the same, but take <strong>2 minutes</strong>.",
+
+        "stroopIntro1": "The second task is “naming colors”",
+        "stroopExplain1": "You will see color-words printed in a different color",
+        "stroopExplain2": "Your task is to <strong>say the color the word is printed in</strong>",
+        "stroopExplain3": "You are <strong>not supposed to read</strong> the word",
+        "stroopExplain4": "You can speak when there is a <strong>microphone in the top middle</strong> of the screen",
+        "stroopExplain5": "Let‘s try it out",
+        "stroopExample1": "Say  “blue”. Then click on 'next'",
+        "stroopExample2": "Say  “yellow”. Then click on 'next'",
+        "stroopExample3": "Say  “green”. Then click on 'next'",
+        "stroopExplain8": "Your aim is to get <strong>as many correct answers as possible</strong>",
+        "stroopExplain9": "Let’s try it for 30 seconds today",
+        "stroopExplain10": "From tomorrow on the test will look exactly the same, but take <strong>2 minutes</strong>",
+        "microphoneTitle": "Audio recording required",
+        "microphoneHint": "Depending on your device, you might now be asked to allow microphone access. Otherwise click on 'next'",
+
+        "memoryIntro1": "The third task is “remembering words”",
+        "memoryExplain1": "A <strong>list of words</strong> will be shown to you <strong>one after another</strong>",
+        "memoryExplain2": "Your task is to <strong>remember</trong> them",
+        "memoryExplain3": "In the end you will be asked to <strong>say as many out loud as you can</strong>",
+        "memoryExplain4": "Let‘s try it out with 5 words",
+        "memoryExplain5": "The words were Moon, Banana, Butterfly, Farmer, Pen",
+        "memoryExplain6": "It is <strong>not important</strong> in which <strong>order</strong> you say them",
+        "memoryExplain7": "From tomorrow on they will be <strong>nine words</strong>",
+        "memoryExplain8": "Don't worry if you do not remember all of them. That is very normal",
+
+        "cognitiveTestsOutro1": "These three tests will <strong>always appear in a different order</strong>.",
+
+        "physicalSymptoms1": "Next you will be asked to <strong>rate your current symptoms</strong>",
+        "physicalSymptoms2": "If you <strong>do not experience</strong> one of the proposed symptoms, you can <strong>rate it with 0</strong>",
+        "physicalSymptoms3": "Please <strong>add symptoms</strong> you experience right now that were not already covered by other questions",
+        "physicalSymptoms4": "You can change the list of proposed symptoms in the app at any time",
+        "activities1": "Next you will be asked about the activities you have performed the last assessment",
+        "activities2": "You will be asked if they were <strong>mentally or physically exhausting</strong>",
+        "activities3": "This depends entirely on your <strong>personal perception</strong> and can also change from day to day",
+        "activities4": "For example, cooking might be not exhausting at all, or physically exhausting, or mentally exhausting or both",
+        "activities5": "You will also be asked if the activities were <strong>mandatory or leisures</strong> activitites",
+        "activities6": "Mandatory means you do it <strong>because you have</strong> to (e.g. work, houswork, studies, doctor appointments)",
+        "activities7": "Leisure activities are activities you do <strong>for fun</strong> (e.g. meeting friends, hobbies)",
+        "postQuestions1": "Now go through the next questions to see if everything is clear to you",
+        "postQuestions2": "At the end you will be asked about your <strong>fatigue again</strong> to see if it has changed",
+        "evaluateLastTest1": "On the very last page you will be asked to reflect about how the <strong>assessment before this one</strong> affected you",
+
+        "export1": "Whenever you collected new data an <strong>export button</strong> will appear in the app",
+        "export2": "If you click on it, all new data is <strong>sent to the study team</strong>",
+        "export3": "This requires an <strong>internet connection</strong>",
+        "export4": "Let's give it a try",
+        "export5": "You can <strong>decide yourself</strong> when you want to upload your data",
+        "export6": "You should export your data <strong>at least once at the end of the study</strong>.",
+        "almostDone1": "Before we finish this tutorial we want to show you two more functions",
+        "skip1": "If you feel like it is necessary, you can entirely <strong>skip an assessment</strong>.",
+        "skip2": "Let's give it a try",
+        "finish1": "You can also <strong>stop in the middle of an assessment</strong>, if you feel like it is necessary.",
+        "finish2": "Try it out by clicking on the <strong>door in the upper right corner</strong>.",
+        "demoDone1": "Now you are done with the tutorial for today",
+        "demoDone2": "If you have any questions before the tests start tomorrow, feel free to send an e-mail to <email>{{ addr }}</email>",
+        "demoDone3": "Thank you for your help!"
+      },
+      "stimuli": {
+        "memory": ["Moon", "Banana", "Butterfly", "Farmer", "Pen"]
+      }
     },
+    "phoneNumber": {
+      "instruction": "Please type in the phone number of the device you are using right now.",
+      "label": "Phone Number"
+    },
+    "phoneNumberCheck": {
+      "instruction": "You should receive a text message with a code. This can take up to 1 minute. Please type in the code you received below. If you do not receive any message in more than a minute, please check the phone number you have typed in on the previous page.",
+      "label": "Code",
+      "attempts_error": "You have only {{attempts_maximum}} attempts to type in the correct phone number. You have {{attempts_left}} attempts left.",
+      "no_attempts_left": "You have reached the maximum number of attempts. Please contact the study team if you would like to continue with the study."
+    },
+    "symptoms": {
+      "title": "Symptoms",
+      "questionMC": "Did you experience any of the following symptoms in the past 4 weeks?",
+      "questionOther": "Please name any additional symptoms you experienced in the past 4 weeks that were not in the list.",
+      "options": [
+        "Abdominal pain",
+        "Menstrual and period problems",
+        "Altered smell/taste",
+        "Anxiety",
+        "Blurred vision",
+        "Chest pain",
+        "Cognitive dysfunction/brain fog",
+        "Cough",
+        "Depression",
+        "Dizziness",
+        "Fatigue",
+        "Intermittent fever",
+        "Gastrointestinal issues (diarrhoea, constipation, acid reflux)",
+        "Headache",
+        "Memory issues",
+        "Joint pain",
+        "Muscle pain/spasms",
+        "Neuralgias",
+        "New onset allergies",
+        "Pins and needles sensations",
+        "Post-exertional malaise",
+        "Shortness of breath",
+        "Sleep disorders",
+        "Tachycardia/palpitations",
+        "Tinnitus and other hearing issues"
+      ],
+      "excludeFromDaily": [
+        "Altered smell/taste",
+        "Anxiety",
+        "Cognitive dysfunction/brain fog",
+        "Depression",
+        "Fatigue",
+        "Memory issues",
+        "New onset allergies",
+        "Post-exertional malaise",
+        "Sleep disorders"
+      ],
+      "hint": "Symptoms shown in lighter text will be excluded from your daily test surveys.",
+      "next": "Next"
+    },
+    "installation_finished": "You are now done setting up the app. Tomorrow the button for the guide will appear here.",
     "general": {
       "exit": {
         "end_button": "End",
@@ -59,6 +229,11 @@
         "end_question": "Do you really want to end the survey?",
         "end_confirm_yes": "End",
         "end_confirm_no": "Cancel"
+      },
+      "help": {
+        "title": "Problems or questions?",
+        "text": "Please send an e-mail to the study team. We will try to answer as fast as possible.",
+        "confirm": "Close"
       },
       "fatigue": {
         "title": "Fatigue",
@@ -78,7 +253,9 @@
       },
       "no_test_previous": {
         "title": "No test last time",
-        "question": "You did not take the test yesterday at {{ time }}. What was the reason?",
+        "question": "You did not take the test {{ day }}  at {{ time }}. What was the reason?",
+        "label_today": "today",
+        "label_yesterday": "yesterday",
         "answer_fatigue": "Too exhausted",
         "answer_time": "No time",
         "answer_mood": "No desire",
@@ -108,7 +285,8 @@
           "answer_yes": "Yes",
           "answer_no": "No",
           "answer_unsure_relation": "I had PEM, but I don't know if it was related to the last survey.",
-          "answer_no_response": "I don't know. / I don't want to answer."
+          "answer_no_response": "I don't know. / I don't want to answer.",
+          "explain": "*PEM = Post-exertional malaise"
         },
         "next": "Next"
       },
@@ -128,6 +306,7 @@
       "duration": {
         "title": "Duration",
         "question": "How many minutes of survey do you have energy for now?",
+        "unlimited": "Unlimited",
         "hint": "The survey will stop after this time (+- 30 seconds).",
         "minutes": "Minutes",
         "no_time": "I can't do the survey right now."
@@ -145,7 +324,7 @@
     },
     "test": {
       "memory": {
-        "title": "Remember words",
+        "title": "Remembering words",
         "introduction": "Please memorize the following words carefully.\n\nAfterwards, list all the words you remember.",
         "start_text": "The test starts in",
         "button": "Ready"
@@ -162,7 +341,7 @@
         "next": "Next"
       },
       "matching": {
-        "title": "Matching",
+        "title": "Selecting Symbols",
         "introduction": "Please match the following symbols and numbers.",
         "start_text": "The test starts in",
         "button": "Start",
@@ -171,8 +350,8 @@
         "timesup_text": "The results has been saved."
       },
       "stroop": {
-        "title": "Stroop",
-        "introduction": "Please read the word out loud.",
+        "title": "Naming Colors",
+        "introduction": "Please name the color out loud.",
         "start": "Start",
         "start_text": "Recording starts in",
         "next": "Next",
@@ -186,7 +365,13 @@
         "answer_pre": "Approximately",
         "answer_post": "hours",
         "question2": "How was your sleep last night?",
+        "bad": "Very badly",
+        "good": "Very well",
         "next": "Next"
+      },
+      "activities": {
+        "when_today": "Today",
+        "when_yesterday": "Yesterday"
       },
       "activities_must": {
         "question": "What have you done since the last survey?",
@@ -230,12 +415,17 @@
         "stomach_ache": "Stomach ache",
         "headache": "Headache",
         "nausea": "Nausea",
+        "add_symptoms_button": "Add a symptom",
+        "add_symptoms_text": "Name or description",
         "next": "Next"
       },
       "mood": {
-        "question": "How is your mood right now?",
-        "bad": "Very bad",
-        "good": "Very good",
+        "question": "How strongly are you currently experiencing the following emotions?",
+        "label_depression": "Low mood",
+        "label_anxiety": "Anxiety",
+        "label_irritation": "Irritation",
+        "bad": "Very strong",
+        "good": "Not at all",
         "next": "Next"
       },
       "performance": {
@@ -255,6 +445,65 @@
         },
         "next": "Next"
       }
+    },
+    "weekly": {
+      "work": {
+        "questionTotal": "How many hours did you work/study/attend education etc. in total last week?",
+        "questionHome": "How many of these hours did you work in home office?",
+        "hint": "Please also exclude extra jobs and overtime.",
+        "options": [
+          "Not at all.",
+          "Does not apply to me.",
+          "I don't know / I don't want to answer."
+        ],
+        "hours": "Hours:",
+        "next": "Next"
+      },
+      "ill": {
+        "questionOverall": "Were you sick last week?",
+        "hint": "Aside from your post-COVID complaints, e.g., a flu, or gastrointestinal infection.",
+        "optionsOverall": [
+          "Yes",
+          "No",
+          "I don't know / I don't want to answer."
+        ],
+        "questionWhich": "Which sickness(es) were they?",
+        "illnessWhich": "Sicknesses:",
+        "no_answer": "I don't know / I don't want to answer.",
+        "questionDays": "On which days were you sick?",
+        "optionsDays": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "next": "Next"
+      },
+      "mens": {
+        "questionOverall": "Have you had your menstruation in the last week? (period)",
+        "optionsOverall": [
+          "Yes",
+          "No",
+          "Does not apply to me.",
+          "I don't know / I don't want to answer."
+        ],
+        "no_answer": "I don't know / I don't want to answer.",
+        "questionDays": "On which days in the last week did you have your menstruation? (period)",
+        "optionsDays": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "next": "Next"
+      },
+      "next": "Next"
     }
   }
 }

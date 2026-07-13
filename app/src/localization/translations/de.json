@@ -1,5 +1,8 @@
 {
   "language": "German",
+  "general": {
+    "support_mail": "annkathrin.knak@ki.se"
+  },
   "components": {
     "specify": "Bitte angeben...",
     "alert": {
@@ -25,17 +28,39 @@
       "install_ios_hint": "Um die App zu installieren, tippen Sie unten auf das Teilen-Symbol und wählen dann 'Zum Home-Bildschirm hinzufügen' aus.",
       "open_app": "Bitte schließen Sie jetzt den Browser und öffnen Sie die App.",
       "enter_code": "code...",
-      "button": {
+      "buttons": {
         "start": "Test Starten",
         "validate": "Code prüfen",
+        "phoneNumber": "Telefonnummer eingeben",
         "symptoms": "Symptome Eingeben",
-        "demo": "Demo Starten",
+        "adapt_symptoms": "Symptome anpassen",
+        "start_demo": "Tutorial Starten",
+        "repeat_demo": "Tutorial Wiederholen",
+        "repeat_matching": "„Symbole auswählen“ wiederholen",
+        "repeat_stroop": "„Farben benennen“ wiederholen",
+        "repeat_memory": "„Wörter merken“ wiederholen",
         "tomorrow": "Morgen Starten",
         "missed": "Verpasster Test",
         "sleep": "Schlaf",
         "weekly": "Wöchentliche Erhebung",
-        "export": "Export"
+        "export": "Export",
+        "demoChapters": {
+          "welcome": "Willkommen",
+          "duration": "Dauer",
+          "wellbeing": "Fatigue & Kognition",
+          "matching": "Test: Symbole auswählen",
+          "stroop": "Test: Farben benennen",
+          "memory": "Test: Wörter merken",
+          "activities": "Questions: Activities",
+          "symptoms": "Questions: Symptoms",
+          "export": "Export",
+          "skipAndStop": "Tests überspringen & beenden"
+        }
       },
+      "daily_tests_over": "Die täglichen Befragungen sind vorbei.",
+      "reminder_weekly": "Bitte denken Sie daran, die wöchentliche Erhebung auszufüllen.",
+      "reminder_export": "Bitte denken Sie daran, Ihre Daten noch einmal zu exportieren.",
+      "deinstall_app": "Sie haben alle Aufgaben in der App abgeschlossen. Sie erhalten weitere Anweisungen per E-Mail. Sie können die App nun deinstallieren.",
       "permission": {
         "mic": {
           "title": "Mikrofonzugriff benötigt",
@@ -47,23 +72,199 @@
         "error_refresh": "Neu laden"
       }
     },
-    "symptoms": {
-      "title": "Körperliche Symptome eintragen",
-      "add": "Symptom eingeben",
-      "finish": "Abschließen"
-    },
-    "general": {
-      "help": {
-        "title": "Hilfe",
-        "text": "Bei Fragen wenden Sie sich an die Testleitung.",
-        "confirm": "Schließen"
+    "demo": {
+      "alerts": {
+        "unlimited": "Bitte wählen Sie zu Demonstrationszwecken unbegrenzte Dauer.",
+        "skip": "Bitte wählen Sie zu Demonstrationszwecken aus, dass Sie die Befragung überspringen möchten.",
+        "finish": "Bitte wählen Sie zu Demonstrationszwecken aus, dass Sie die Befragung beenden möchten.",
+        "matching_first": "In diesem Beispiel müssen Sie auf die Schaltfläche in der oberen rechten Ecke mit dem + drücken."
       },
+      "instructions": {
+        "welcome": "Willkommen zum Tutorial!",
+        "startButton1": "Tun wir so, als hätten Sie gerade eine SMS erhalten",
+        "startButton2": "Ein Knopf wäre für die nächsten halbe Stunde sichtbar",
+        "startButton3": "<strong>Klicken</strong> Sie darauf, um die Befragung zu starten",
+
+        "microphone1": "Manche der Tests erfordern <strong>Audioaufnahmen</strong>",
+        "microphone2": "Je nach Gerät könnten Sie gefragt werden, <strong>Mikrofon-Zugriff zu erlauben</strong>",
+        "microphone3": "<strong>Wenn Ihre Stimme aufgezeichnet wird</strong>, sehen Sie ein <strong>Mikrofon-Symbol</strong> in der Mitte des Bildschirms",
+
+        "selectDuration1": "Am Anfang jeder Befragung können Sie die <strong>maximale Dauer</strong> auswählen",
+        "selectDuration2": "Die Befragung wird nach dieser Dauer <strong>automatisch beendet</strong>",
+        "selectDuration3": "Bitte wählen Sie die Dauer immer entsprechend Ihrer <strong>aktuellen Erschöpfung</strong>",
+        "selectDuration4": "Für das Tutorial können SIe jeztt <strong>„unbegrenzt“ auswählen</strong>",
+        "preQuestions1": "Die ersten Fragen betreffen Ihren aktuellen Fatigue und kognitive Einschräkungen",
+        "preQuestions2": "Sie werden gebeten, die <strong>Intensität dieser Symptome</strong> oder <strong>verschiedene Aussagen zu bewerten </strong>",
+        "preQuestions3": "Für heute können Sie <strong>beliebige Antworten eintragen</strong>",
+
+        "cognitiveTestsIntro1": "Es gibt <strong>drei kognitive Tests</strong> in den täglichen Befragungen",
+
+        "matchingIntro1": "In diesem Tutorial ist der erste Test “Symbole auswählen”",
+        "matchingExample1": "Klicken Sie auf den Knopf mit dem Symbol, das zur Zahl passt",
+        "matchingExplain1": "Ihr Ziel ist es, <strong>so viele richtige Antworten wie möglich</strong> zu erhalten",
+        "matchingExplain2": "Heute probieren Sie es nur für 30 Sekunden aus",
+        "matchingExplain3": "Ab morgen wird der Test genau gleich aussehen, aber <strong>2 Minuten</strong> dauern.",
+
+        "stroopIntro1": "Die zweite Aufgabe ist “Farben benennen”",
+        "stroopExplain1": "Sie bekommen Farbworte angezeigt, die in einer <strong>anderen Farbe</strong> geschrieben sind",
+        "stroopExplain2": "Ihre Aufgabe ist es, <strong>die Farbe zu nennen, in der das Wort geschrieben ist</strong>",
+        "stroopExplain3": "Sie sollen das <strong>Wort nicht lesen</strong>",
+        "stroopExplain4": "Sie können sprechen, wenn sich ein <strong>Mikrofon in der Mitte oben</strong> auf dem Bildschirm befindet",
+        "stroopExplain5": "Probieren Sie es aus",
+        "stroopExample1": "Sagen Sie  “blau”. Dann klicken Sie auf 'Weiter'",
+        "stroopExample2": "Sagen Sie  “gelb”. Dann klicken Sie auf 'Weiter'",
+        "stroopExample3": "Sagen Sie  “grün”. Dann klicken Sie auf 'Weiter'",
+        "stroopExplain8": "Ihr Ziel ist es, <strong>so viele richtige Antworten wie möglich</strong> zu erhalten",
+        "stroopExplain9": "Heute probieren Sie es nur für 30 Sekunden aus",
+        "stroopExplain10": "Ab morgen wird der Test genau gleich aussehen, aber <strong>2 Minuten</strong> dauern.",
+        "microphoneTitle": "Audioaufnahme erforderlich",
+        "microphoneHint": "Je nach Gerät werden Sie möglicherweise gebeten, den Zugriff auf das Mikrofon zu erlauben. Andernfalls klicken Sie auf 'Weiter'",
+
+        "memoryIntro1": "Die dritte Aufgabe ist “Wörter merken”",
+        "memoryExplain1": "Ihnen werden der Reihe nach eine <strong>Liste von Wörtern</strong> angezeigt",
+        "memoryExplain2": "Ihre Aufgabe ist es, <strong> sie sich zu merken</strong>",
+        "memoryExplain3": "Am Ende werden Sie gebeten, <strong>so viele wie möglich laut zu sagen</strong>",
+        "memoryExplain4": "Heute probieren Sie es mit 5 Wörtern aus",
+        "memoryExplain5": "Die Wörter waren Mond, Banane, Schmetterling, Bauer, Stift",
+        "memoryExplain6": "Es ist <strong>nicht wichtig</strong>, in welcher <strong>Reihenfolge</strong> Sie die Wörter sagen",
+        "memoryExplain7": "Ab morgen werden es <strong>zehn Wörter</strong> sein",
+        "memoryExplain8": "Machen Sie sich keine Sorgen, wenn Sie nicht alle merken. Das ist sehr normal",
+
+        "cognitiveTestsOutro1": "Diese drei Tests werden <strong>immer in einer anderen Reihenfolge</strong> erscheinen.",
+
+        "physicalSymptoms1": "Als nächstes werden Sie gebeten, die Intensität Ihrer aktuellen Symptome <strong>zu bewerten</strong>",
+        "physicalSymptoms2": "Wenn Sie eines der vorgeschlagenen Symptome <strong>gerade nicht erleben</strong>, können Sie es <strong> mit 0 bewerten</strong>",
+        "physicalSymptoms3": "Bitte <strong>fügen Sie Symptome hinzu</strong>, die Sie derzeit erleben, die nicht bereits durch andere Fragen abgedeckt sind",
+        "physicalSymptoms4": "Sie können die Liste der vorgeschlagenen Symptome in der App jederzeit ändern",
+        "activities1": "Als nächstes werden Sie gebeten, anzugeben, was für Aktivitäten Sie in der letzten Befragung durchgeführt haben",
+        "activities2": "Sie werden gefragt, ob diese Aktivitäten <strong>geistig oder körperlich anstrengend</strong> waren",
+        "activities3": "Das hängt vollständig von Ihrer <strong>persönlichen Wahrnehmung</strong> ab und kann auch von Tag zu Tag variieren",
+        "activities4": "Zum Beispiel könnte Kochen überhaupt nicht anstrengend sein, oder körperlich anstrengend, oder geistig anstrengend oder beides",
+        "activities5": "Sie werden auch gefragt, ob die Aktivitäten <strong>verpflichtende- oder Freizeitaktivitäten</strong> waren",
+        "activities6": "Verpflichtend bedeutet, dass Sie es tun, weil <strong>weil Sie es müssen</strong> (z.B. Arbeit, Haushalt, Studien, Arzttermine)",
+        "activities7": "Freizeitaktivitäten bedeutet, dass Sie es tun, weil es <strong>Ihnen Spaß macht</strong> (z.B. Freunde treffen, Hobbys)",
+        "postQuestions1": "Gehen Sie nun durch die nächsten Fragen, um zu sehen, ob alles für Sie klar ist",
+        "postQuestions2": "Am Ende werden Sie wieder nach Ihrer <strong>Fatigue</strong> gefragt, um zu sehen, ob es sich verändert hat",
+        "evaluateLastTest1": "Auf der letzten Seite werden Sie gebeten, darüber nachzudenken, wie die <strong>Befragung vor dieser</strong> Sie beeinflusst hat",
+
+        "export1": "Immer, wenn Sie neue Daten gesammelt haben, erscheint ein <strong>Export-Knopf</strong> in der App",
+        "export2": "Wenn Sie darauf klicken, werden alle neuen Daten <strong>an das Forschungsteam gesendet</strong>",
+        "export3": "Dies erfordert eine <strong>Internetverbindung</strong>",
+        "export4": "Probieren Sie es einmal aus",
+        "export5": "Sie können <strong>selbst entscheiden</strong>, wann Sie Ihre Daten hochladen möchten",
+        "export6": "Sie sollten Ihre Daten <strong>mindestens einmal am Ende der Studie</strong> exportieren.",
+        "almostDone1": "Bevor wir dieses Tutorial beenden, möchten wir Ihnen zwei weitere Funktionen zeigen",
+        "skip1": "Wenn Sie finden, dass es notwendig ist, können Sie eine <strong>Befragung vollständig überspringen</strong>.",
+        "skip2": "Lassen Sie uns das einmal ausprobieren",
+        "finish1": "Sie können auch <strong>mitten in einer Befragung aufhören</strong>, wenn Sie finden, dass es notwendig ist.",
+        "finish2": "Probieren Sie es aus, indem Sie auf die <strong>Tür in der oberen rechten Ecke</strong> klicken.",
+        "demoDone1": "Jetzt sind Sie mit dem Tutorial für heute fertig",
+        "demoDone2": "Wenn Sie Fragen haben, bevor die Tests morgen starten, können Sie gerne eine E-Mail an <email>{{ addr }}</email> senden",
+        "demoDone3": "Vielen Dank für Ihre Unterstützung!"
+      },
+      "stimuli": {
+        "memory": ["Mond", "Banane", "Schmetterling", "Fahne", "Stift"]
+      }
+    },
+    "phoneNumber": {
+      "instruction": "Bitte geben Sie die Telefonnummer des Geräts ein, das Sie gerade verwenden.",
+      "label": "Telefonnummer"
+    },
+    "phoneNumberCheck": {
+      "instruction": "Bitte geben Sie den Code ein, den Sie per SMS erhalten haben. Wenn Sie keine Nachricht erhalten haben, überprüfen Sie bitte die Telefonnummer, die Sie auf der vorherigen Seite eingegeben haben.",
+      "label": "Code",
+      "attempts_error": "Sie haben nur {{attempts_maximum}} Versuche, um die richtige Telefonnummer einzugeben. Sie haben {{attempts_left}} Versuche übrig.",
+      "no_attempts_left": "Sie haben die maximal Anzahl von Versuchen erreicht. Bitte kontaktieren Sie das Studienteam, falls Sie mit der Studie fortfahren möchten."
+    },
+    "symptoms": {
+      "title": "Symptome",
+      "questionMC": "Unter welchen der folgenden Symptome haben Sie in den letzten 4 Wochen gelitten?",
+      "questionOther": "Bitte nennen Sie weitere Symptome unter denen Sie in den letzten 4 Wochen gelitten haben, die nicht in der Liste aufgetaucht sind.",
+      "options": [
+        "Fatigue (chronische Erschöpfung)",
+        "Schlafstörung /z.B. Einschlaf- oder Durchschlafstlrungen, Schlaf nicht erholsam)",
+        "Depressive Verstimmungen",
+        "Angst",
+        "Konzentrationsstörung",
+        "Wortfindungschwierigkeiten",
+        "Gedächtnisstörung",
+        "Geschmacksstörungen",
+        "Geruchsstörungen",
+        "Volle Leistungsfähigkeit nach körperlicher Belastung nicht wieder erreicht",
+        "Kurzatmigkeit bei Belastung",
+        "Haarausfall",
+        "Atemnot",
+        "Hörbeeinträchtigung",
+        "Appetitveränderungen",
+        "Menstruationsveränderungen",
+        "Bindehautentzündung",
+        "Gelenk- oder Muskelschmerzen",
+        "Heiserkeit",
+        "Schmerzen oder Kratzen im Hals",
+        "Laufende Nase",
+        "Husten",
+        "Pfeifende oder keuchende Atmung",
+        "Herzstolpern, Herzaussetzer",
+        "Herzrasen",
+        "Durchfall",
+        "Erbrechen",
+        "Übelkeit",
+        "Verwirrtheit",
+        "Schwindel",
+        "Kopfschmerzen",
+        "Lähmungen",
+        "Gefühlsstörungen",
+        "Zittern",
+        "Hautausschlag",
+        "Juckreiz",
+        "Schüttelfrost",
+        "Fieber",
+        "Grippeartiges Gefühl",
+        "Verstopfung",
+        "Bauchschmerzen, Blähungen o.Ä.",
+        "Ohrenschmerzen",
+        "Tinnitus",
+        "Sehstörungen",
+        "Augenschmerzen",
+        "Brustschmerzen",
+        "Bauchschmerzen"
+      ],
+      "excludeFromDaily": [
+        "Angst",
+        "Fatigue (chronische Erschöpfung)",
+        "Schlafstörung /z.B. Einschlaf- oder Durchschlafstlrungen, Schlaf nicht erholsam)",
+        "Depressive Verstimmungen",
+        "Angst",
+        "Konzentrationsstörung",
+        "Wortfindungschwierigkeiten",
+        "Gedächtnisstörung",
+        "Geschmacksstörungen",
+        "Geruchsstörungen",
+        "Volle Leistungsfähigkeit nach körperlicher Belastung nicht wieder erreicht",
+        "Kurzatmigkeit bei Belastung",
+        "Haarausfall",
+        "Atemnot",
+        "Hörbeeinträchtigung",
+        "Appetitveränderungen",
+        "Menstruationsveränderungen",
+        "Bindehautentzündung"
+      ],
+      "hint": "Symptome, die in heller Schrift angezeigt werden, werden von Ihren täglichen Testumfragen ausgeschlossen.",
+      "next": "Next"
+    },
+    "installation_finished": "Sie haben die Einrichtung der App nun abgeschlossen. Morgen erscheint hier der Knopf für das Tutorial.",
+    "general": {
       "exit": {
         "end_button": "Beenden",
         "end_title": "Erhebung beenden",
         "end_question": "Möchten Sie die Erhebung wirklich beenden?",
         "end_confirm_yes": "Beenden",
         "end_confirm_no": "Abbrechen"
+      },
+      "help": {
+        "title": "Probleme oder Fragen?",
+        "text": "Bitte senden Sie eine E-Mail an die Studienleitung. Wir versuchen, Ihnen so schnell wie möglich zu antworten.",
+        "confirm": "Schließen"
       },
       "fatigue": {
         "title": "Fatigue",
@@ -83,7 +284,9 @@
       },
       "no_test_previous": {
         "title": "Kein Test letztes Mal",
-        "question": "Sie haben die Testung gestern um {{ time }} Uhr nicht durchgeführt. Woran lag das?",
+        "question": "Sie haben die Testung {{ day}} um {{ time }} Uhr nicht durchgeführt. Woran lag das?",
+        "label_today": "heute",
+        "label_yesterday": "gestern",
         "answer_fatigue": "Zu erschöpft",
         "answer_time": "Keine Zeit",
         "answer_mood": "Keine Lust",
@@ -118,7 +321,7 @@
         "next": "Weiter"
       },
       "no_test_now": {
-        "title": "Kein Test Jetzt",
+        "title": "Jetz keine Befragung",
         "question": "Warum können Sie jetzt keine Testung durchführen?",
         "answer_fatigued": "Zu erschöpft",
         "answer_time": "Keine Zeit",
@@ -134,6 +337,7 @@
         "title": "Dauer",
         "question": "Für wie viele Minuten Befragung haben Sie jetzt Energie?",
         "hint": "Die Befragung wird nach dieser Zeit (+- 30 Sekunden) abgebrochen.",
+        "unlimited": "Unbegrenzt",
         "minutes": "Minuten",
         "no_time": "Ich kann jetzt keine Befragung durchführen."
       },
@@ -167,8 +371,8 @@
         "next": "Weiter"
       },
       "matching": {
-        "title": "Matching",
-        "introduction": "Wähle das Symbole zu der angezeigten Zahl.",
+        "title": "Symbole auswählen",
+        "introduction": "Wählen Sie das Symbol zu der angezeigten Zahl.",
         "start_text": "Der Test beginnt in",
         "button": "Start",
         "next": "Weiter",
@@ -176,8 +380,8 @@
         "timesup_text": "Die Eingaben wurden gespeichert."
       },
       "stroop": {
-        "title": "Stroop",
-        "introduction": "Bitte nenne die Farbe.",
+        "title": "Farben benennen",
+        "introduction": "Bitte nennen Sie die Farbe in der das Wort angezeigt wird.",
         "start": "Start",
         "start_text": "Die Aufnahme beginnt in",
         "next": "Weiter",
@@ -191,7 +395,13 @@
         "answer_pre": "Ungefähr",
         "answer_post": "Stunden",
         "question2": "Wie war Ihr Schlaf letzte Nacht?",
+        "bad": "Sehr schlecht",
+        "good": "Sehr gut",
         "next": "Weiter"
+      },
+      "activities": {
+        "when_today": "Heute",
+        "when_yesterday": "Gestern"
       },
       "activities_must": {
         "question": "Was haben Sie seit der letzten Befragung unternommen?",
@@ -235,12 +445,17 @@
         "stomach_ache": "Bauchschmerzen",
         "headache": "Kopfschmerzen",
         "nausea": "Übelkeit",
+        "add_symptoms_button": "Symptom hinzufügen",
+        "add_symptoms_text": "Bezeichnung oder Beschreibung",
         "next": "Weiter"
       },
       "mood": {
-        "question": "Wie ist Ihre Stimmung gerade?",
-        "bad": "sehr schlecht",
-        "good": "sehr gut",
+        "question": "Wie stark erleben Sie gerade die folgenden Emotionen?",
+        "label_depression": "Niedergeschlagenheit",
+        "label_anxiety": "Unruhe",
+        "label_irritation": "Verärgerung",
+        "bad": "Sehr stark",
+        "good": "Überhaupt nicht",
         "next": "Weiter"
       },
       "performance": {
@@ -260,6 +475,65 @@
         },
         "next": "Weiter"
       }
+    },
+    "weekly": {
+      "work": {
+        "questionTotal": "Wie viele Stunden haben Sie tatsächlich in der letzten Woche für Ihr(e/n) Beruf/Ausbildung/Studium etc. gearbeitet?",
+        "questionHome": "Wie viele Stunden davon waren im Home-Office?",
+        "hint": "Bitte berücksichtigen Sie auch Nebenbeschäftigungen und Überstunden.",
+        "options": [
+          "Gar nicht.",
+          "Trifft auf mich nicht zu.",
+          "Weiß nicht./Will ich nicht beantworten."
+        ],
+        "hours": "Stunden:",
+        "next": "Weiter"
+      },
+      "ill": {
+        "questionOverall": "Waren Sie in der letzten Woche krank?",
+        "hint": "Unabhängig von Ihrem Post-Covid Syndrom, z.B: Erkältung, Magen-Darm-Virus",
+        "optionsOverall": [
+          "Ja",
+          "Nein",
+          "Weiß ich nicht./Möchte ich nicht beantworten."
+        ],
+        "questionWhich": "Um welche Erkrankung(en) handelt(e) es sich?",
+        "illnessWhich": "Erkrankungen:",
+        "no_answer": "Weiß nicht./Möchte ich nicht beantworten.",
+        "questionDays": "An welchen Tagen der letzten Woche waren Sie krank?",
+        "optionsDays": [
+          "Montag",
+          "Dienstag",
+          "Mittwoch",
+          "Donnerstag",
+          "Freitag",
+          "Samstag",
+          "Sonntag"
+        ],
+        "next": "Weiter"
+      },
+      "mens": {
+        "questionOverall": "Hatten Sie in der letzten Woche Ihre Menstruation? (Periode/Regelblutung)",
+        "optionsOverall": [
+          "Ja",
+          "Nein",
+          "Trifft auf mich nicht zu.",
+          "Weiß ich nicht./Möchte ich nicht beantworten."
+        ],
+        "no_answer": "Weiß ich nicht./Möchte ich nicht beantworten.",
+        "questionDays": "An welchen Tagen der letzten Woche hatten Sie Ihre Menstruation? (Periode/Regelblutung)",
+        "optionsDays": [
+          "Montag",
+          "Dienstag",
+          "Mittwoch",
+          "Donnerstag",
+          "Freitag",
+          "Samstag",
+          "Sonntag"
+        ],
+        "next": "Weiter"
+      },
+      "next": "Weiter"
     }
   }
 }

@@ -24,7 +24,9 @@ const QuestionnaireFatigueScreen: React.FC = () => {
   const [physicalFatigue, setPhysicalFatigue] = useState(0);
 
   // Access navigation to the next test step from theme/context
-  const { gotoNextTest } = useTheme();
+  const { gotoNextTest, gotoNextDemo } = useTheme();
+
+  const studyPhase = localStorage.getItem('studyPhase');
 
   /**
    * Handle the next step when the user confirms their fatigue ratings
@@ -43,12 +45,15 @@ const QuestionnaireFatigueScreen: React.FC = () => {
     } else {
       sessionStorage.setItem('fatigue2', JSON.stringify(fatigue));
     }
-
-    gotoNextTest();
+    if (studyPhase === 'DemoDay1') {
+      gotoNextDemo();
+    } else {
+      gotoNextTest();
+    }
   }
 
   return (
-    <TestTemplate page={location.state !== null ? location.state.progress : 0}>
+    <TestTemplate page={location.state !== null ? location.state.progress : 0} withoutProgressbar={studyPhase === 'DemoDay1'}>
       <div style={styles.content}>
         <h1 style={styles.headline}>{t('screens.general.fatigue.question')}</h1>
 

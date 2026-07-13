@@ -10,6 +10,9 @@ import { TColors } from '../style/colors';
 export type PageTemplateProps = {
   /** Children elements to render inside the page */
   children: React.ReactNode;
+
+  /** Whether to hide the progress bar */
+  withoutProgressbar?: boolean;
 };
 
 /**
@@ -113,6 +116,10 @@ const defaultStyles = (colors: TColors) => ({
   },
   headline: {
     fontSize: '1.25rem',
+    margin: '0 0 10px 0',
+  },
+  subheadline: {
+    fontSize: '1rem',
     margin: '0 0 10px 0',
   },
   text: {

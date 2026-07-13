@@ -24,6 +24,12 @@ type SliderProps = {
 
   /** If true, display slider with textual labels instead of central image */
   text?: boolean;
+
+  /** If true, the label is a text input field and can be customized*/
+  customLabel?: boolean;
+
+  /** Callback function triggered when text input changes */
+  onInput?: (value: string) => void;
 };
 
 /**
@@ -32,14 +38,16 @@ type SliderProps = {
  * A versatile slider component with optional textual labels or central image.
  * Supports multiple types that determine images, text labels, and min/max values.
  *
- * @param type - Slider type ('fatigue', 'symptoms', 'mood', 'performance', etc.)
+ * @param type - Slider type ('fatigue', 'symptoms', 'mood', 'sleep', 'performance' etc.)
  * @param value - Current slider value
  * @param onChange - Callback function to update value
  * @param image - Optional image displayed in the middle
  * @param label - Optional label text
  * @param text - If true, renders textual slider instead of image-based
+ * @param customLabel - Label is a textInput field
+ *
  */
-export const Slider: React.FC<SliderProps> = ({ type, value, onChange, image, label, text = false }) => {
+export const Slider: React.FC<SliderProps> = ({ type, value, onChange, image, label, text = false, customLabel = false, onInput }) => {
   const { t } = useTranslation(); // Translation hook
   const { styles } = useStyles(defaultStyles); // Generate styles
 
@@ -53,6 +61,8 @@ export const Slider: React.FC<SliderProps> = ({ type, value, onChange, image, la
       case 'symptoms':
         return 'good.svg';
       case 'mood':
+        return 'good.svg';
+      case 'sleep':
         return 'bad.svg';
       case 'performance':
         return 'cancel.svg';
@@ -71,6 +81,8 @@ export const Slider: React.FC<SliderProps> = ({ type, value, onChange, image, la
       case 'symptoms':
         return 'bad.svg';
       case 'mood':
+        return 'bad.svg';
+      case 'sleep':
         return 'good.svg';
       case 'performance':
         return 'check.png';
@@ -89,7 +101,9 @@ export const Slider: React.FC<SliderProps> = ({ type, value, onChange, image, la
       case 'symptoms':
         return 'screens.pre_test.symptoms.no_symptoms';
       case 'mood':
-        return 'screens.post_test.mood.bad';
+        return 'screens.post_test.mood.good';
+      case 'sleep':
+        return 'screens.post_test.sleep.bad';
       case 'performance':
         return 'screens.post_test.performance.no';
       default:
@@ -107,7 +121,9 @@ export const Slider: React.FC<SliderProps> = ({ type, value, onChange, image, la
       case 'symptoms':
         return 'screens.pre_test.symptoms.strong_symptoms';
       case 'mood':
-        return 'screens.post_test.mood.good';
+        return 'screens.post_test.mood.bad';
+      case 'sleep':
+        return 'screens.post_test.sleep.good';
       case 'performance':
         return 'screens.post_test.performance.yes';
       default:
@@ -126,6 +142,8 @@ export const Slider: React.FC<SliderProps> = ({ type, value, onChange, image, la
       case 'symptoms':
       case 'mood':
         return 0;
+      case 'sleep':
+        return 0;
       default:
         return 0;
     }
@@ -142,8 +160,20 @@ export const Slider: React.FC<SliderProps> = ({ type, value, onChange, image, la
       case 'symptoms':
       case 'mood':
         return 10;
+      case 'sleep':
+        return 10;
       default:
         return 10;
+    }
+  }
+
+  /**
+   * Handles input to the customLabel text input if a function for onInput is defined
+   * @param e - value of the text input
+   */
+  function handleInput(e: React.ChangeEvent<HTMLInputElement>) {
+    if (onInput) {
+      onInput(e.target.value);
     }
   }
 
@@ -151,9 +181,19 @@ export const Slider: React.FC<SliderProps> = ({ type, value, onChange, image, la
   if (text) {
     return (
       <div>
-        {/* Optional label above slider */}
-        <p style={styles.middleText}>{label}</p>
-
+        {!customLabel ? (
+          <>
+            {/* Optional label above slider */}
+            <p style={styles.middleLabel}>{label}</p>
+          </>
+        ) : (
+          <>
+            {/* Optional label above slider */}
+            <p style={styles.middleText}>
+              <input type="text" placeholder={label} onChange={handleInput} />
+            </p>
+          </>
+        )}
         <div style={styles.fatigueContainer}>
           {/* Left side: image + text */}
           <div style={styles.fatgueSideContainer}>
@@ -197,7 +237,19 @@ export const Slider: React.FC<SliderProps> = ({ type, value, onChange, image, la
       {/* Middle: image + label + slider */}
       <div style={styles.fatgueMidContainer}>
         <img src={image} alt="" style={styles.middleImage} />
-        <p style={styles.middleLabel}>{label}</p>
+        {!customLabel ? (
+          <>
+            {/* Optional label above slider */}
+            <p style={styles.middleLabel}>{label}</p>
+          </>
+        ) : (
+          <>
+            {/* Optional label above slider */}
+            <p style={styles.middleText}>
+              <input type="text" placeholder={label} onChange={handleInput} />
+            </p>
+          </>
+        )}
         <input
           type="range"
           min={getMinValue()}

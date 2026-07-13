@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { TColors } from '../style/colors';
-import { usePageContext } from './PageTemplate';
+import React, { useState } from "react";
+import { TColors } from "../style/colors";
+import { usePageContext } from "./PageTemplate";
 
 /**
  * Mode type for the checkbox: either single (radio behavior) or multi (checkbox behavior)
  */
-type Mode = 'single' | 'multi';
+type Mode = "single" | "multi";
 
 /**
  * Props for the Checkbox component
@@ -37,6 +37,9 @@ interface CheckboxProps {
 
   /** Callback triggered when text input(s) are updated */
   onInputUpdate?: (values: string[]) => void;
+
+  /** Whether the checkbox is not relevant (e.g., lower opacity) */
+  notRelevant?: boolean;
 }
 
 /**
@@ -54,13 +57,24 @@ interface CheckboxProps {
  * @param onChange - Callback function when input changes
  * @param showInputField - Whether to render a text input for custom values
  * @param onInputUpdate - Callback triggered when input field values change
+ * @param notRelevant - If true, styles the checkbox as not relevant (e.g., lower opacity)
  */
-const Checkbox: React.FC<CheckboxProps> = ({ mode = 'multi', name, value, label, checked, onChange, showInputField = false, onInputUpdate }) => {
+const Checkbox: React.FC<CheckboxProps> = ({
+  mode = "multi",
+  name,
+  value,
+  label,
+  checked,
+  onChange,
+  showInputField = false,
+  onInputUpdate,
+  notRelevant = false,
+}) => {
   // Get translations and styles from the page context
   const { t, styles } = usePageContext(defaultStyles);
 
   // Local state for text input values (for optional input fields)
-  const [inputs, setInputs] = useState<string[]>(['']);
+  const [inputs, setInputs] = useState<string[]>([""]);
 
   /**
    * Handle changes to the text input fields
@@ -69,14 +83,14 @@ const Checkbox: React.FC<CheckboxProps> = ({ mode = 'multi', name, value, label,
    * @param newValue - New string value from the input field
    */
   const handleInputChange = (index: number, newValue: string) => {
-    if (mode === 'single') {
+    if (mode === "single") {
       // SINGLE MODE: Only one input value is allowed
       const updated = [newValue];
       setInputs(updated);
 
       // If the checkbox/radio isn't checked yet and input is not empty,
       // trigger the onChange callback with a fake event to mark it as checked
-      if (!checked && newValue.trim() !== '') {
+      if (!checked && newValue.trim() !== "") {
         const fakeEvent = {
           target: { name, value },
         } as unknown as React.ChangeEvent<HTMLInputElement>;
@@ -85,7 +99,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ mode = 'multi', name, value, label,
 
       // Notify parent of non-empty input values
       if (onInputUpdate) {
-        onInputUpdate(updated.filter((v) => v.trim() !== ''));
+        onInputUpdate(updated.filter((v) => v.trim() !== ""));
       }
     } else {
       // MULTI MODE: Allow multiple input values
@@ -93,14 +107,14 @@ const Checkbox: React.FC<CheckboxProps> = ({ mode = 'multi', name, value, label,
       updated[index] = newValue;
 
       // If the last input is filled, append a new empty input for additional entries
-      if (index === updated.length - 1 && newValue.trim() !== '') {
-        updated.push('');
+      if (index === updated.length - 1 && newValue.trim() !== "") {
+        updated.push("");
       }
 
       setInputs(updated);
 
       // Trigger onChange for first non-empty input if checkbox wasn't checked
-      if (!checked && newValue.trim() !== '') {
+      if (!checked && newValue.trim() !== "") {
         const fakeEvent = {
           target: { name, value },
         } as unknown as React.ChangeEvent<HTMLInputElement>;
@@ -109,7 +123,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ mode = 'multi', name, value, label,
 
       // Notify parent of non-empty input values
       if (onInputUpdate) {
-        onInputUpdate(updated.filter((v) => v.trim() !== ''));
+        onInputUpdate(updated.filter((v) => v.trim() !== ""));
       }
     }
   };
@@ -117,9 +131,9 @@ const Checkbox: React.FC<CheckboxProps> = ({ mode = 'multi', name, value, label,
   return (
     <div style={styles.container}>
       {/* Label and main input (checkbox or radio) */}
-      <label style={styles.label}>
+      <label style={(styles.label, { opacity: notRelevant ? 0.5 : 1 })}>
         <input
-          type={mode === 'single' ? 'radio' : 'checkbox'}
+          type={mode === "single" ? "radio" : "checkbox"}
           name={name}
           value={value}
           checked={checked}
@@ -130,12 +144,12 @@ const Checkbox: React.FC<CheckboxProps> = ({ mode = 'multi', name, value, label,
 
       {/* Optional text input field(s) */}
       {showInputField &&
-        (mode === 'single' ? (
+        (mode === "single" ? (
           <input
             type="text"
             value={inputs[0]}
             onChange={(e) => handleInputChange(0, e.target.value)}
-            placeholder={t('components.specify')}
+            placeholder={t("components.specify")}
             style={styles.input}
           />
         ) : (
@@ -145,7 +159,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ mode = 'multi', name, value, label,
               type="text"
               value={val}
               onChange={(e) => handleInputChange(idx, e.target.value)}
-              placeholder={t('components.specify')}
+              placeholder={t("components.specify")}
               style={styles.input}
             />
           ))
@@ -162,28 +176,28 @@ export default Checkbox;
  */
 const defaultStyles = (colors: TColors) => ({
   container: {
-    display: 'flex',
-    flexDirection: 'column' as const,
-    gap: '0.5rem',
-    padding: '0',
-    margin: '4px 0',
-    width: '100%',
-    boxSizing: 'border-box' as const,
+    display: "flex",
+    flexDirection: "column" as const,
+    gap: "0.5rem",
+    padding: "0",
+    margin: "4px 0",
+    width: "100%",
+    boxSizing: "border-box" as const,
   },
   label: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '0.75rem',
-    cursor: 'pointer',
-    width: '100%',
+    display: "flex",
+    alignItems: "center",
+    gap: "0.75rem",
+    cursor: "pointer",
+    width: "100%",
   },
   input: {
-    padding: '0.5rem',
-    fontSize: '0.875rem',
-    border: '1px solid',
+    padding: "0.5rem",
+    fontSize: "0.875rem",
+    border: "1px solid",
     borderColor: colors.gray,
-    borderRadius: '0.25rem',
-    width: '100%',
-    boxSizing: 'border-box' as const,
+    borderRadius: "0.25rem",
+    width: "100%",
+    boxSizing: "border-box" as const,
   },
 });

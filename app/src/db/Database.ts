@@ -6,12 +6,17 @@ export class Database {
   private readonly DB_NAME = "CovisionDB";
 
   // Current schema version - increase this when structure changes
-  private readonly VERSION = 3;
+  private readonly VERSION = 4;
 
   // Definition of all object stores (tables)
-  private readonly TABLES: { [key: string]: { keyPath: string; autoIncrement: boolean } } = {
+  private readonly TABLES: {
+    [key: string]: { keyPath: string; autoIncrement: boolean };
+  } = {
     tests: { keyPath: "id", autoIncrement: true },
-    symptoms: { keyPath: "id", autoIncrement: true },
+    symptomsAll: { keyPath: "id", autoIncrement: true },
+    symptomsAsk: { keyPath: "id", autoIncrement: true },
+    // store for onboarding phone numbers
+    phoneNumber: { keyPath: "id", autoIncrement: true },
   };
 
   // Private constructor -> ensures singleton pattern
@@ -42,7 +47,10 @@ export class Database {
         const db = (e.target as IDBOpenDBRequest).result;
         for (const [table, options] of Object.entries(this.TABLES)) {
           if (!db.objectStoreNames.contains(table)) {
-            db.createObjectStore(table, { keyPath: options.keyPath, autoIncrement: options.autoIncrement });
+            db.createObjectStore(table, {
+              keyPath: options.keyPath,
+              autoIncrement: options.autoIncrement,
+            });
           }
         }
       };
@@ -73,7 +81,10 @@ export class Database {
   /**
    * Returns a single record by id
    */
-  public async getById<T = any>(table: string, id: number | string): Promise<T | undefined> {
+  public async getById<T = any>(
+    table: string,
+    id: number | string
+  ): Promise<T | undefined> {
     const db = await this.open();
     return new Promise((resolve, reject) => {
       const tx = db.transaction(table, "readonly");

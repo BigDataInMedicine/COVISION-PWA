@@ -6,6 +6,7 @@ import { SmallButton } from './SmallButton';
 import { TColors } from '../style/colors';
 import questionMark from '../images/question_mark.svg';
 import { useTheme } from '../context/ThemeContext';
+import { version } from '../context/version';
 
 /**
  * Props for TestTemplate component
@@ -16,6 +17,9 @@ interface TestTemplateProps extends PageTemplateProps {
 
   /** Whether to hide the progress bar */
   withoutProgressbar?: boolean;
+
+  /** Whether to hide the help button and modal */
+  withoutHelp?: boolean;
 }
 
 /**
@@ -31,13 +35,18 @@ interface TestTemplateProps extends PageTemplateProps {
  * @param page - current test page number
  * @param withoutProgressbar - hide the progress bar if true
  */
-export const TestTemplate: React.FC<TestTemplateProps> = ({ children, page = 5, withoutProgressbar = false }) => {
+export const TestTemplate: React.FC<TestTemplateProps> = ({ children, page = 5, withoutProgressbar = false, withoutHelp = false }) => {
   const { t, styles, navigate } = usePageContext(defaultStyles); // get translations, styles, and navigation
   const { getRouteCount } = useTheme(); // get total number of test pages
 
   // Local state for showing help and confirm modals
   const [showHelp, setShowHelp] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
+  const demoStage = localStorage.getItem('demoStage');
+  const { currentInstructions } = useTheme();
+  const supportEmail = t('general.support_mail');
+
+  const withoutEndTest = demoStage === 'demoOngoing' && currentInstructions !== 'finishEarly';
 
   /** Show the help modal */
   function showHelpModal() {
@@ -69,15 +78,28 @@ export const TestTemplate: React.FC<TestTemplateProps> = ({ children, page = 5, 
     <PageTemplate>
       {/* Title bar with help button, progress bar and end button */}
       <div style={styles.titleBar}>
-        <button style={styles.helpButton} onClick={showHelpModal}>
-          <img src={questionMark} style={{ maxWidth: '30px', width: '15vw', maxHeight: '30px', height: '15vw' }} alt="" />
-        </button>
+        {!withoutHelp && (
+          <button style={styles.helpButton} onClick={showHelpModal}>
+            <img
+              src={questionMark}
+              style={{
+                maxWidth: '30px',
+                width: '15vw',
+                maxHeight: '30px',
+                height: '15vw',
+              }}
+              alt=""
+            />
+          </button>
+        )}
 
         {!withoutProgressbar && <ProgressBar value={page} max={getRouteCount()} />}
 
-        <button style={styles.endButton} onClick={endTest}>
-          <img src={require('../images/door.png')} style={{ maxWidth: '30px', width: '15vw' }} alt="" />
-        </button>
+        {!withoutEndTest && (
+          <button style={styles.endButton} onClick={endTest}>
+            <img src={require('../images/door.png')} style={{ maxWidth: '30px', width: '15vw' }} alt="" />
+          </button>
+        )}
       </div>
 
       {/* Test page content */}
@@ -92,9 +114,17 @@ export const TestTemplate: React.FC<TestTemplateProps> = ({ children, page = 5, 
       )}
 
       {/* Help modal */}
-      {showHelp && (
+      {!withoutHelp && showHelp && (
         <Modal title={t('screens.general.help.title')} text={t('screens.general.help.text')}>
-          <SmallButton text={t('screens.general.help.confirm')} onClick={handleClose} style={styles.neutralButton} />
+          <p style={{ alignItems: 'center' }}>
+            <a href={`mailto:${supportEmail}`}>{supportEmail}</a>
+            <SmallButton
+              text={t('screens.general.help.confirm')}
+              onClick={handleClose}
+              style={{ ...styles.neutralButton, margin: '0 auto', marginTop: '20px', marginBottom: '20px' }}
+            />
+            Version: {version}
+          </p>
         </Modal>
       )}
     </PageTemplate>

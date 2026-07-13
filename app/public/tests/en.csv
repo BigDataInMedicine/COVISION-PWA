@@ -1,30 +1,29 @@
-testN;memoryWordList;colorWordList;colorColorList;;;;
-0;Tree, Machine, Sunrise, Car, Blackboard, Key, Pepper, Backpack, Armchair, Moon; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-1;Keyboard, Chain, Mouth, Rabbit, Bell, Boy, Corner, Windmill, Bus, Chair; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-2;Factory, Basket, Wig, Bird, Lemon, Leg, Bracelet, Glass, Column, Drum; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-3;Anchor, Knee, Bag, Harp, Diaper, Tree, Wheelbarrow, Arrow, Radio, Goat; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-4;Rope, Rain, Battery, Tooth, Crown, Sweater, Violin, Wasp, Pot, Magnet; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;513.6
-5;Piano, Lighter, Arm, Island, Owl, Table, Engine, Diamond, Apron, Castle; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-6;Flag, Sponge, Belt, Ruler, Tunnel, Duck, Bell, Branch, Ball, Melon; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-7;Carrot, Cloud, Bed, Cane, Pipe, Oil, Toaster, Keyhole, Axe, Lion; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-8;Coin, Ice, Hammer, Stamp, Calendar, Hose, Stairs, Parachute, Rhinoceros, Choir; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-9;Crutch, Corn, Fountain, Net, Ear, Steering Wheel, Postman, Sink, Gift, Fly; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-10;Faucet, Beard, Shoe, Horn, Wall, Compass, Pineapple, Bag, Airplane, Rat; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-11;Maze, Newspaper, Circle, Hippopotamus, Heart, Saw, Pirate, Telephone, Window, Milk; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-12;Shovel, Foot, Lighthouse, Fruit, Mask, Farm, Car, Teapot, Comb, Zebra; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-13;Skirt, Triangle, Medal, Cork, Broom, Snow, Mushroom, Tractor, Airport, Monkey; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-14;Rocket, Microphone, Square, Street, Bench, Hand, Trophy, Cookie, Dolphin, Feather; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-15;Cone, Pencil, Face, House, Throne, Pepper, Dragon, Star, Zipper, Bicycle; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-16;Eye, Helmet, Fire, Gate, Mountain, Lettuce, Caravan, Computer, Cage, Brush; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-17;Mirror, Button, Nose, Boat, Shower, Wing, Apple, Giraffe, Forest, Trash Can; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-18;Ant, Bone, Shirt, Soccer Ball, Dice, Trumpet, Moon, Soup, Pool, Glasses; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-19;Microscope, Train, Cherry, Brush, Fan, Brain, Hat, Lake, Carpet, Lantern; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-20;Fairy, Park, Stapler, Scar, Shoelace, Refrigerator, Guitar, Curtain, Leaf, Onion; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-21;Ankle, Butter, Robot, Towel, Mustache, Orchestra, Wolf, River, Doll, Tower; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-22;Dog, Greenhouse, Letter, Drum Set, Mermaid, Cape, Acorn, Coffee, Finger, Night; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-23;Clock, Pizza, Drawer, Rose, Helicopter, Printer, Flute, Lightning, Crab, Needle; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-24;Chin, Bottle, Book, Ferris Wheel, Volcano, Saxophone, Plant, Mouse, Scale, Glove; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-25;Man, Castle, Earring, Flower, Domino, Deer, Wave, Plate, Light Bulb, Knot; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-26;City, Fork, Cactus, Woman, Chicken, Coat, Puddle, Lamp, Razor, Wizard; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-27;Spoon, Sun, Fish, Thumb, Cucumber, Fence, Telescope, Perfume, Picture, Tie; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
-28;Lung, Parrot, Umbrella, Cupboard, Iceberg, Candle, Pear, Roof, Witch, Fist; red, blue, yellow, green; #cc0000, #0000ff, #ffff00, #009900;;;;
+testN;memoryWordList;colorWordList;colorColorList
+1;fly,cloud,cane,glass,armchair,river,toaster,pillar,violin;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+2;night,bed,heart,tree,wizard,lighter,rocket,pillow,steering wheel;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+3;plant,bag,tooth,box,pencil,arrow,painter,helmet,domino;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+4;fish,bell,train,rat,towel,shower,airport,feather,radio;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+5;rug,cube,mouth,lamp,robot,teacher,circle,engine,factory;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+6;boy,crab,lake,ear,medal,greenhouse,necklace,bracelet,pineapple;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+7;doll,goat,brain,roof,airplane,needle,napkin,rabbit,telephone;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+8;net,scar,knee,gate,dolphin,puddle,woman,table,orchestra;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+9;square,chin,bird,deer,iceberg,compass,wallet,lightning,parachute;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+10;drum,bone,hand,spoon,faucet,shoelace,window,drawer,newspaper;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+11;horn,man,broom,sink,glasses,giraffe,forest,keyboard,bicycle;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+12;fist,fork,fruit,throne,trophy,rhino,ladder,apple,architect;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+13;street,dice,rope,leg,doctor,letter,magnet,waiter,battery;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+14;chair,foot,wig,choir,mermaid,finger,lawyer,basket,cabinet;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+15;mouse,thumb,sponge,wall,mitten,zebra,lighthouse,melon,engineer;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+16;chain,wave,wing,fridge,camper,monkey,island,mirror,microphone;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+17;dog,axe,glove,soup,mushroom,lettuce,perfume,anchor,bell pepper;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+18;nose,crown,saw,scale,ticket,shovel,bucket,fountain,triangle;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+19;pot,worm,owl,wasp,pirate,lemon,mountain,onion,umbrella;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+20;rose,judge,ball,duck,dancer,bottle,printer,button,volcano;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+21;pipe,moon,stamp,gift,teapot,trumpet,blanket,parrot,astronaut;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+22;fire,leaf,park,shoe,curtain,chimney,crayfish,lamppost,calendar;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+23;rain,house,hose,fan,necktie,trash can,ice cream,pizza,microscope;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+24;bench,snow,cone,plate,coffee,lightbulb,tunnel,zipper,computer;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+25;coin,mask,witch,hare,lion,ankle,corner,ruler,cucumber;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+26;car,oil,corn,stairs,drum kit,razor,tower,baker,ferris wheel;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+27;face,cork,flag,knot,windmill,flower,apron,sweater,wheelbarrow;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
+28;star,brush,fence,well,doorbell,sunrise,hippo,pepper,telescope;red, blue, yellow, green;#cc0000, #0000ff, #ffff00, #009900
