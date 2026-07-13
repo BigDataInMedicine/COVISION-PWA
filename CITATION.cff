@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+version: 1.1.0
+license: "MIT"
+type: software
+date-released: "2026-07-13"
+doi: "10.5281/zenodo.21278265"
+message: "If you use this software, please cite it using the metadata from this file."
+repository-code: "https://github.com/BigDataInMedicine/COVISION-PWA"
+url: "https://github.com/BigDataInMedicine/COVISION-PWA"
+title: "COVISION-PWA"
+authors:
+- affiliation: "Carl von Ossietzky Universität Oldenburg"
+  family-names: Weber
+  given-names: Marcel
+  orcid: "https://orcid.org/0009-0002-6531-226X"
+- affiliation: "Carl von Ossietzky Universität Oldenburg"
+  family-names: Knak
+  given-names: Ann-Kathrin
+  orcid: "https://orcid.org/0009-0007-8059-5719"
+- affiliation: "Carl von Ossietzky Universität Oldenburg"
+  family-names: Wulff
+  given-names: Antje
+  orcid: "https://orcid.org/0000-0002-2550-2627"
+keywords:
+- Post-COVID
+- long-COVID
+- smartphone-based assessment
+- Mobile health
+- Fatigue
