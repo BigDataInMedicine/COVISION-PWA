@@ -9,6 +9,8 @@
 > **A progressive web application (PWA) for longitudinal symptom monitoring in post-COVID patients.**  
 > Designed to capture fluctuating fatigue and cognitive symptoms in daily life with minimal cognitive load.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21278265.svg)](https://doi.org/10.5281/zenodo.21278265)
+
 ---
 
 ## 🎯 Overview
@@ -26,7 +28,32 @@ COVISION-PWA is a **mobile-first, offline-capable research app** built with Reac
 
 ---
 
+## 💻 System Requirements and Compatibility
+
+The application is implemented as a Progressive Web Application (PWA) and therefore runs on all modern operating systems using a standards-compliant web browser.
+
+### Supported platforms
+
+- Windows
+- macOS
+- Linux
+- Android
+- iOS / iPadOS
+
+### Supported browsers
+
+The application has been developed and tested on:
+
+- 5 Android devices / smartphones (Version 12 - 16)
+- 6 iOS devices / smartphones (Version 15 - 18)
+
+Because it follows standard web technologies, it is expected to work with all modern browsers supporting Progressive Web Applications.
+
+---
+
 ## 🛠️ Local Development
+
+Local Development refers to running the application on a developer's own computer for testing, debugging, or further development. This setup is intended for developers who want to modify the source code before deploying the application to a web server.
 
 ### Prerequisites
 
@@ -49,6 +76,8 @@ npm run dev
 
 > Open the server URL displayed in the console in your browser.
 
+If you want to test the application on your local computer set the `debug` variable in `Home.tsx` true. With setting the variable true, you are not forced to install the application. Also you test the application on your local computer without setting up a server, just use the `Demo` Code. For more Information see Demo Instructions.
+
 ### Build for Production
 
 ```bash
@@ -64,6 +93,19 @@ npm run build
 
 ## 🖥️ Server Deployment
 
+Server Deployment describes how to install the production version of the application on a web server so that it can be accessed by study participants via a web browser. After deployment, users only need the application URL and do not need to install any additional software.
+
+> **Note:** Before deployment, configure the **server_url** in the application to match your server and generate the production build (build/) by following the instructions in the **Local Development** section.
+
+### Server Requirements
+
+The production server should provide:
+
+- PHP 8.2
+- File system write permissions for the `uploads/` and `queue/` directories
+- HTTPS (recommended, required for full PWA functionality)
+- A standard web server such as Apache or Nginx
+
 ### Required Files
 
 The following files must be uploaded to your server (e.g., `https:///yourdomain.com/`):
@@ -72,7 +114,6 @@ The following files must be uploaded to your server (e.g., `https:///yourdomain.
 | ----------------------------------- | ------------------------------------------ |
 | `build/`                            | Compiled React app                         |
 | `queue/`                            | Stored phone numbers and times to send sms |
-| `tests/`                            | Test codes and content                     |
 | `uploads/`                          | Exported user data                         |
 | `server/check_code.php`             | Validates test codes                       |
 | `server/upload.php`                 | Uploads test data                          |
@@ -86,8 +127,8 @@ Please make sure that every file has the permissions to access the relevant fold
 ### Deployment Steps
 
 1. Build the app: `npm run build`
-2. Upload `build/` to your server root (e.g., `public_html/` or `www/`)
-3. Upload `server/` to the same root
+2. Upload content of `build/` to your server root (e.g., `public_html/` or `www/`)
+3. Upload content of `server/` to the same root
 4. Ensure PHP is enabled and files are accessible
 5. Test: Visit `https://yourdomain.com/` → should load the app
 
@@ -375,6 +416,16 @@ After entering the demo mode, buttons for the following functions become availab
 If you use this project in your research, please cite:
 
 - Weber M, Knak AK, Wulff A. A Mobile Research App for Post-COVID Fatigue Monitoring. Stud Health Technol Inform. 2026 May 21;336:1614-1618. doi: [10.3233/SHTI260498](https://doi.org/10.3233/SHTI260498). PMID: 42175169.
+
+## 📚 Citation & Publication
+
+If you use **COVISION-PWA** in your research, please cite the software release:
+
+- Weber M, Knak AK, Wulff A. _COVISION-PWA_ (Version 1.0.0) [Computer software]. Zenodo. 2025 Oct. doi: [10.5281/zenodo.21278265](https://doi.org/10.5281/zenodo.21278265).
+
+For a detailed description of the application's design, methodology, implementation, and intended research use, please refer to the accompanying conference paper:
+
+- Weber M, Knak AK, Wulff A. _A Mobile Research App for Post-COVID Fatigue Monitoring_. Stud Health Technol Inform. 2026 May 21;336:1614-1618. doi: [10.3233/SHTI260498](https://doi.org/10.3233/SHTI260498). PMID: 42175169.
 
 ---
 
