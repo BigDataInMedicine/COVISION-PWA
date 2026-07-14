@@ -364,7 +364,7 @@ COVISION-PWA/app/
 
 ## 🧪 Demo Instructions
 
-The app includes a demo mode that lets you explore the user-facing functionality without being enrolled as an actual study participant. This section explains how to access it and how the available functions relate to real-world app usage.
+The app includes a demo mode that lets you explore the user-facing functionality without being enrolled as an actual study participant. This section explains how to access it and how the available functions relate to real-world app usage. For screenshots and description of the demo visit the wiki page.
 
 > **Note:** The demo mode is currently only available in English.
 
@@ -410,12 +410,6 @@ After entering the demo mode, buttons for the following functions become availab
   This button is always visible, both in the demo and in the real app, allowing participants to update their symptom selection at any time.
 
 ---
-
-## 📚 Publication
-
-If you use this project in your research, please cite:
-
-- Weber M, Knak AK, Wulff A. A Mobile Research App for Post-COVID Fatigue Monitoring. Stud Health Technol Inform. 2026 May 21;336:1614-1618. doi: [10.3233/SHTI260498](https://doi.org/10.3233/SHTI260498). PMID: 42175169.
 
 ## 📚 Citation & Publication
 
